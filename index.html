@@ -115,9 +115,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 28px;height:68px;d
 .fc-name{font-family:var(--display);font-size:40px;font-weight:400;margin-bottom:6px;letter-spacing:.04em}
 .fc-role{font-family:var(--mono);font-size:11px;color:var(--accent);letter-spacing:.08em;text-transform:uppercase;margin-bottom:16px}
 .fc-desc{color:var(--muted2);font-size:14px;line-height:1.8;max-width:640px;margin:0 auto 24px}
-.fc-links{display:flex;gap:0;justify-content:space-evenly;align-items:flex-start;width:100%;margin-top:8px}
-.video-dropdown{position:relative;display:flex;flex-direction:column;align-items:center;flex:1}
-.video-dropdown-toggle{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:8px 16px;border:1px solid var(--border2);border-radius:4px;background:transparent;color:var(--muted2);cursor:pointer;transition:all .2s;width:100%;text-align:center}
+.fc-links{display:flex;gap:8px;justify-content:center;align-items:stretch;width:100%;margin-top:8px;padding:0 8px}
+.video-dropdown{position:relative;display:flex;flex-direction:column;align-items:stretch;flex:1}
+.video-dropdown-toggle{font-family:var(--mono);font-size:11px;letter-spacing:.04em;text-transform:uppercase;padding:8px 10px;border:1px solid var(--border2);border-radius:4px;background:transparent;color:var(--muted2);cursor:pointer;transition:all .2s;width:100%;text-align:center;word-break:break-word;hyphens:auto;line-height:1.3}
 .video-dropdown-toggle:hover{border-color:var(--accent);color:#fff;background:linear-gradient(135deg,rgba(192,132,252,.2),rgba(77,121,255,.15))}
 .video-dropdown.open .video-dropdown-toggle{border-color:rgba(192,132,252,.5);color:#fff;background:linear-gradient(135deg,rgba(192,132,252,.22),rgba(77,121,255,.18))}
 .video-dropdown-panel{max-height:0;overflow:hidden;transition:max-height .4s ease,margin-top .3s ease;margin-top:0}
@@ -229,6 +229,13 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
 
 /* MOBILE */
 @media(max-width:900px){.nav-links{display:none}}
+@media(max-width:600px){
+  nav{padding:0 14px;height:56px}
+  .nav-logo{font-size:14px;letter-spacing:.08em}
+  .nav-cta{font-size:10px;padding:6px 12px}
+  #lang-btn{font-size:10px;padding:4px 8px}
+  .nav-logo-wrap img{height:20px}
+}
 @media(max-width:700px){
   .packages-grid{grid-template-columns:1fr 1fr}
   .services-grid{grid-template-columns:1fr}
@@ -280,7 +287,7 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
     <div class="logo-item"><img src="media/logos/whealth.png" alt="Whealth" onerror="this.style.display='none'" /></div>
     <div class="logo-item"><img src="media/logos/embodyway.png" alt="EmbodyWay" onerror="this.style.display='none'" /></div>
     <div class="logo-item"><img src="media/logos/stpete.png" alt="Saint Pete Calisthenics" onerror="this.style.display='none'" /></div>
-    <div class="logo-item"><img src="media/logos/socialclub.png" alt="Movement Social Club" onerror="this.style.display='none'" /></div>
+    <div class="logo-item"><img src="media/logos/socialclub.png" alt="Movement Social Club" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=&quot;logo-fallback&quot;>Movement Social Club</span>'" /></div>
     <div class="logo-item"><span class="logo-fallback">SummerfunFitness</span></div>
     <div class="logo-item"><span class="logo-fallback">Andry Strong</span></div>
   </div>
@@ -733,7 +740,7 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
         </div>
         <p class="vsl-desc-short" data-i18n="vsl1-short">The video that closes. I script, structure, and edit VSLs built around the outcome your audience actually wants.</p>
         <div class="vsl-cue-row"><span class="vsl-expand-icon">⌄</span><span class="vsl-expand-cue">Click to learn more</span></div>
-        <div class="vsl-desc-more">Whether that's a course, a coaching program, or a digital product — the goal isn't just a polished video; it's one that converts cold viewers into buyers.
+        <div class="vsl-desc-more" data-i18n="vsl1-more">Whether that's a course, a coaching program, or a digital product — the goal isn't just a polished video; it's one that converts cold viewers into buyers.
           <div class="vsl-proof" style="margin-top:12px"><span class="vsl-proof-dot"></span>Built and produced VSLs for fitness programs and online coaches</div>
         </div>
       </div>
@@ -743,7 +750,7 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
         </div>
         <p class="vsl-desc-short" data-i18n="vsl2-short">Short-form video ads designed to stop the scroll and push people into your funnel — built for performance, not just looks.</p>
         <div class="vsl-cue-row"><span class="vsl-expand-icon">⌄</span><span class="vsl-expand-cue">Click to learn more</span></div>
-        <div class="vsl-desc-more">Produced ad creative for fitness programs that ran on Meta and converted. Strong hooks, fast pacing, and a clear call to action before the viewer can leave.
+        <div class="vsl-desc-more" data-i18n="vsl2-more">Produced ad creative for fitness programs that ran on Meta and converted. Strong hooks, fast pacing, and a clear call to action before the viewer can leave.
           <div class="vsl-proof" style="margin-top:12px"><span class="vsl-proof-dot"></span>Successfully run paid campaigns with positive conversion results</div>
         </div>
       </div>
@@ -753,7 +760,7 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
         </div>
         <p class="vsl-desc-short" data-i18n="vsl3-short">Most fitness creators lose money when they try to monetize — because their editor doesn't understand how to sell.</p>
         <div class="vsl-cue-row"><span class="vsl-expand-icon">⌄</span><span class="vsl-expand-cue">Click to learn more</span></div>
-        <div class="vsl-desc-more">I do. I understand workout programming, how your audience thinks, what they're afraid of, and what they actually want from a program. That context changes everything about how a sales video is written and cut.</div>
+        <div class="vsl-desc-more" data-i18n="vsl3-more">I do. I understand workout programming, how your audience thinks, what they're afraid of, and what they actually want from a program. That context changes everything about how a sales video is written and cut.</div>
       </div>
     </div>
     <div style="text-align:center;font-family:var(--mono);font-size:12px;color:var(--muted2);margin-top:28px;line-height:1;display:flex;flex-direction:column;gap:10px;align-items:center">
@@ -791,13 +798,14 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
       <!-- Content Production -->
       <div class="pkg-card">
         <div class="pkg-name" data-i18n="pkg2-name">Content Production</div>
-        <div class="pkg-price">$1,800 <span style="font-size:12px;font-family:var(--sans);font-weight:600;letter-spacing:.08em;-webkit-text-fill-color:var(--muted2);color:var(--muted2);background:none;margin-left:-2px">USD</span></div>
-        <div class="pkg-per" data-i18n="pkg-per">per month</div>
+        <div class="pkg-price">$1,650 <span style="font-size:12px;font-family:var(--sans);font-weight:600;letter-spacing:.08em;-webkit-text-fill-color:var(--muted2);color:var(--muted2);background:none;margin-left:-2px">USD</span></div>
+        <div class="pkg-per" data-i18n="pkg-per">per month · first month</div>
         <div class="pkg-divider"></div>
         <ul class="pkg-items">
           <li>3 long-form videos edited</li>
           <li>Thumbnail per video</li>
           <li>2 shorts per video</li>
+          <li>Hook scripts written</li>
           <li>Monthly content plan</li>
           <li>Video blueprints</li>
           <li>Title strategy</li>
@@ -814,7 +822,6 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
         <ul class="pkg-items">
           <li>Everything in Content Production</li>
           <li>4 videos per month</li>
-          <li>Hook scripts written</li>
           <li>Channel management</li>
           <li>Uploading to YouTube</li>
           <li>Analytics review</li>
@@ -1163,6 +1170,9 @@ const TRANSLATIONS = {
     'pkg-h': 'Pick your level<br>of involvement.',
     'pkg-sub': 'Every package is a monthly retainer. Minimum two-month commitment so we can actually move the needle.',
     'pkg-note': 'All packages are monthly retainers · Minimum 2-month commitment',
+    'vsl1-more': "Whether that's a course, a coaching program, or a digital product — the goal isn't just a polished video; it's one that converts cold viewers into buyers.",
+    'vsl2-more': 'Produced ad creative for fitness programs that ran on Meta and converted. Strong hooks, fast pacing, and a clear call to action before the viewer can leave.',
+    'vsl3-more': "I do. I understand workout programming, how your audience thinks, what they're afraid of, and what they actually want from a program. That context changes everything about how a sales video is written and cut.",
     'stat1': 'Views served across all videos &amp; platforms',
     'stat2': 'Subscribers &amp; followers built through social media',
     'stat3': 'Years in fitness &amp; content production',
@@ -1275,6 +1285,15 @@ const TRANSLATIONS = {
     'pkg-h': 'Elige tu nivel<br>de compromiso.',
     'pkg-sub': 'Cada paquete es un contrato mensual. Mínimo dos meses de compromiso para realmente mover la aguja.',
     'pkg-note': 'Todos los paquetes son contratos mensuales · Compromiso mínimo de 2 meses',
+    'vsl1-more': 'Ya sea un curso, un programa de coaching o un producto digital — el objetivo no es solo un video pulido; es uno que convierta espectadores fríos en compradores.',
+    'vsl2-more': 'Produje creativos publicitarios para programas de fitness que se publicaron en Meta y convirtieron. Ganchos fuertes, ritmo rápido y un llamado a la acción claro antes de que el espectador pueda irse.',
+    'vsl3-more': 'Entiendo la programación de entrenamientos, cómo piensa tu audiencia, qué le da miedo y qué quiere realmente de un programa. Ese contexto cambia todo sobre cómo se escribe y edita un video de ventas.',
+    'hero-h2a': 'construyendo',
+    'hero-h2b': 'contenido orgánico.',
+    'hero-sub2a': 'Tú grabas.',
+    'hero-sub2b': 'Nosotros manejamos todo lo demás.',
+    'contact-reach': 'Por favor escríbenos abajo.',
+    'pkg2-name': 'Producción de Contenido',
     'stat1': 'Vistas generadas en todos los videos y plataformas',
     'stat2': 'Suscriptores y seguidores construidos en redes sociales',
     'stat3': 'Años en fitness y producción de contenido',
@@ -1380,14 +1399,14 @@ function applyTranslations() {
   const pkgItems = {
     en: {
       pkg1: ['8–10 short-form clips','Captions included','Basic motion graphics','No long-form involved'],
-      pkg2: ['3 long-form videos edited','Thumbnail per video','2 shorts per video','Monthly content plan','Video blueprints','Title strategy'],
-      pkg3: ['Everything in Content Production','4 videos per month','Hook scripts written','Channel management','Uploading to YouTube','Analytics review','Monthly strategy call'],
+      pkg2: ['3 long-form videos edited','Thumbnail per video','2 shorts per video','Hook scripts written','Monthly content plan','Video blueprints','Title strategy'],
+      pkg3: ['Everything in Content Production','4 videos per month','Channel management','Uploading to YouTube','Analytics review','Monthly strategy call'],
       pkg4: ['Everything in Growth Partner','Cross-platform posting','Community management','Priority turnaround','Expanded analytics report']
     },
     es: {
       pkg1: ['8–10 clips de formato corto','Subtítulos incluidos','Gráficos básicos en movimiento','Sin formato largo'],
-      pkg2: ['3 videos largos editados','Miniatura por video','2 shorts por video','Plan mensual de contenido','Blueprints de video','Estrategia de títulos'],
-      pkg3: ['Todo lo de Producción de Contenido','4 videos por mes','Scripts de ganchos escritos','Gestión del canal','Subida a YouTube','Revisión de analíticas','Llamada mensual de estrategia'],
+      pkg2: ['3 videos largos editados','Miniatura por video','2 shorts por video','Scripts de ganchos escritos','Plan mensual de contenido','Blueprints de video','Estrategia de títulos'],
+      pkg3: ['Todo lo de Producción de Contenido','4 videos por mes','Gestión del canal','Subida a YouTube','Revisión de analíticas','Llamada mensual de estrategia'],
       pkg4: ['Todo lo de Socio de Crecimiento','Publicación en todas las plataformas','Gestión de comunidad','Entrega prioritaria','Informe ampliado de analíticas']
     }
   };
