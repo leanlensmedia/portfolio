@@ -659,11 +659,12 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
         </div>
       </div>
       <div>
+        <div class="about-badge" data-i18n="about-badge7">7+ years editing</div>
         <div class="about-badge" data-i18n="about-badge">10+ year athlete</div>
         <div class="about-name">Fabian Diaz</div>
         <div class="about-role">Founder & Editor — Lean Lens Media</div>
-        <p class="about-desc" data-i18n="about-desc1">I've been an active calisthenics athlete for over ten years. That's not a side detail — it's the reason this works. I'm not learning fitness terminology from a script or guessing what a hold or a progression is supposed to look like. I understand the body, how it moves, how workouts are programmed, and what separates a clean rep from a sloppy one — because I've trained that way myself.</p>
-        <p class="about-desc" data-i18n="about-desc2">When a client hands me footage of a handstand progression, a yoga flow, or a calisthenics movement breakdown, I know what I'm looking at. I know what the audience watching is actually trying to learn, and why they clicked in the first place. That's the difference between an editor who makes things look good and one who understands what he's selling.</p>
+        <p class="about-desc" data-i18n="about-desc1">I've been a calisthenics athlete for over ten years. That's not something I mention just to sound credible. It's genuinely the reason I'm good at this. I know what a solid rep looks like. I know how workouts are programmed. I know how the body moves because I've spent years moving mine.</p>
+        <p class="about-desc" data-i18n="about-desc2">So when a client sends me footage of a handstand, a mobility flow, or a movement tutorial, I already get it. I know what the person watching wants to learn and why they clicked. That changes how I edit. It's not just about making things look good. It's about making content that actually connects.</p>
         <div class="about-tags" id="about-tags">
           <span class="about-tag">Calisthenics</span>
           <span class="about-tag">Freestyle Calisthenics</span>
@@ -1193,6 +1194,7 @@ const TRANSLATIONS = {
     'work-sub': "We don't take on many clients.<br>The ones we do, we go all in on.",
     'about-label': "Who's behind the edit?",
     'about-h': "I don't just edit fitness content.<br>I live it.",
+    'about-badge7': '7+ years editing',
     'about-badge': '10+ year athlete',
     'about-role': 'Founder & Editor — Lean Lens Media',
     'services-label': 'What we do',
@@ -1212,6 +1214,7 @@ const TRANSLATIONS = {
     'stat2': 'Subscribers &amp; followers built through social media',
     'stat3': 'Years in fitness &amp; content production',
     'stat4': 'Top creators<br>who trusted us',
+    'stat5': 'Years<br>editing',
     'bilingual-lang': '<span class="flag">🇺🇸</span> <strong>English</strong> &amp; <span class="flag">🇪🇸</span> <strong>Spanish</strong>',
     'contact-label': 'Contact',
     'contact-h': "Let's talk.",
@@ -1246,8 +1249,8 @@ const TRANSLATIONS = {
     'c-social-badge': 'Events',
     'c-social-role': 'Event Content Production',
     'c-social-desc': 'Recap videos and short-form highlights that carry the energy of the event into something shareable.',
-    'about-desc1': "I've been an active calisthenics athlete for over ten years. That's not a side detail — it's the reason this works. I'm not learning fitness terminology from a script or guessing what a hold or a progression is supposed to look like. I understand the body, how it moves, how workouts are programmed, and what separates a clean rep from a sloppy one — because I've trained that way myself.",
-    'about-desc2': "When a client hands me footage of a handstand progression, a yoga flow, or a calisthenics movement breakdown, I know what I'm looking at. I know what the audience watching is actually trying to learn, and why they clicked in the first place. That's the difference between an editor who makes things look good and one who understands what he's selling.",
+    'about-desc1': "I've been a calisthenics athlete for over ten years. That's not something I mention just to sound credible. It's genuinely the reason I'm good at this. I know what a solid rep looks like. I know how workouts are programmed. I know how the body moves because I've spent years moving mine.",
+    'about-desc2': "So when a client sends me footage of a handstand, a mobility flow, or a movement tutorial, I already get it. I know what the person watching wants to learn and why they clicked. That changes how I edit. It's not just about making things look good. It's about making content that actually connects.",
     'svc1-name': '<span class="service-icon">🎬</span> Content Production',
     'svc1-desc': 'Long-form YouTube editing and short-form clips built for retention. Every cut has a reason. Every video is optimized before it goes live.',
     'svc1-more': 'We start with the footage you film and turn it into a finished video built around retention — pacing the first 30 seconds to hook, cutting dead air, layering captions and sound design, and structuring the edit so the story never lets attention drop. Each long-form video also gets cut down into short-form clips designed for the algorithm of whatever platform they land on.',
@@ -1308,6 +1311,7 @@ const TRANSLATIONS = {
     'work-sub': 'No trabajamos con muchos clientes.<br>Los que sí, les damos todo.',
     'about-label': '¿Quién está detrás de la edición?',
     'about-h': 'No solo edito contenido fitness.<br>Lo vivo.',
+    'about-badge7': '7+ años editando',
     'about-badge': 'Atleta por más de 10 años',
     'about-role': 'Fundador y Editor — Lean Lens Media',
     'services-label': 'Lo que hacemos',
@@ -1333,6 +1337,7 @@ const TRANSLATIONS = {
     'stat2': 'Suscriptores y seguidores construidos en redes sociales',
     'stat3': 'Años en fitness y producción de contenido',
     'stat4': 'Mejores creadores<br>que confiaron en nosotros',
+    'stat5': 'Años<br>editando',
     'bilingual-lang': '<span class="flag">🇺🇸</span> <strong>Inglés</strong> &amp; <span class="flag">🇪🇸</span> <strong>Español</strong>',
     'contact-label': 'Contacto',
     'contact-h': 'Hablemos.',
@@ -1363,8 +1368,8 @@ const TRANSLATIONS = {
     'c-social-badge': 'Eventos',
     'c-social-role': 'Producción de Contenido para Eventos',
     'c-social-desc': 'Videos de resumen y highlights en formato corto que llevan la energía del evento a algo compartible.',
-    'about-desc1': 'Llevo más de diez años como atleta activo de calistenia. Eso no es un detalle secundario — es la razón por la que esto funciona. No aprendo terminología fitness de un guión ni adivino cómo se ve un hold o una progresión. Entiendo el cuerpo, cómo se mueve, cómo se programan los entrenamientos y qué separa una repetición limpia de una descuidada — porque yo mismo he entrenado así.',
-    'about-desc2': 'Cuando un cliente me entrega material de una progresión de parada de manos, un flujo de yoga o un desglose de movimiento de calistenia, sé lo que estoy viendo. Sé lo que la audiencia está intentando aprender y por qué hizo clic. Esa es la diferencia entre un editor que hace que las cosas se vean bien y uno que entiende lo que está vendiendo.',
+    'about-desc1': 'Llevo más de diez años entrenando calistenia. No lo menciono para sonar creíble. Es genuinamente la razón por la que soy bueno en esto. Sé cómo se ve una buena repetición. Sé cómo se programa un entrenamiento. Entiendo cómo se mueve el cuerpo porque llevo años moviéndome así.',
+    'about-desc2': 'Entonces cuando un cliente me manda material de una parada de manos, un flujo de movilidad o un tutorial de movimiento, ya lo entiendo. Sé lo que la persona que lo ve quiere aprender y por qué hizo clic. Eso cambia cómo edito. No se trata solo de que se vea bien. Se trata de hacer contenido que de verdad conecte.',
     'svc1-name': '<span class="service-icon">🎬</span> Producción de Contenido',
     'svc1-desc': 'Edición de YouTube en formato largo y clips cortos construidos para la retención. Cada corte tiene un motivo. Cada video está optimizado antes de publicarse.',
     'svc1-more': 'Tomamos el material que grabas y lo convertimos en un video final construido en torno a la retención — ritmo en los primeros 30 segundos para enganchar, eliminar el aire muerto, capas de subtítulos y diseño de sonido, y clips cortos para cada plataforma.',
