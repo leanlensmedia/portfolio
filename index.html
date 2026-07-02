@@ -524,7 +524,7 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
         <span style="font-size:10px;color:var(--muted2);letter-spacing:.08em;font-family:var(--mono)" data-i18n="hero-seo">SEO optimized for search &amp; discovery</span>
       </div>
       <div class="hero-actions">
-        <a href="mailto:leanlensmedia@gmail.com?subject=Let's%20talk%20about%20content" class="btn-primary" data-i18n="hero-cta1">Start a conversation</a>
+        <a href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;" class="btn-primary" data-i18n="hero-cta1">Start a conversation</a>
         <a href="#work" class="btn-ghost" data-i18n="hero-cta2">See our work</a>
       </div>
     </div>
@@ -1224,17 +1224,25 @@ document.querySelectorAll('.stat-n[data-target]').forEach(el => counterObserver.
   const track = document.getElementById('gif-track');
   if (!track) return;
 
-  const gap = 10;   // must match CSS gap
-  const itemW = 90; // must match CSS width
+  const gap = 10; // matches CSS gap
 
-  // Keep cloning until track is at least 3× the viewport width
-  // This guarantees the screen is always filled no matter the screen size
+  // Get all original items (before any cloning)
+  const origItems = Array.from(track.querySelectorAll('.gif-item'));
+  const origCount = origItems.length; // actual number of videos you have
+
+  // Clone the full set until track fills 3× viewport
   function fillTrack() {
     const needed = window.innerWidth * 3;
     while (track.scrollWidth < needed) {
-      const origItems = Array.from(track.querySelectorAll('.gif-item')).slice(0, 5);
       origItems.forEach(item => {
         const clone = item.cloneNode(true);
+        // Re-enable lazy videos in clones
+        clone.querySelectorAll('source[data-src]').forEach(src => {
+          src.src = src.getAttribute('data-src');
+          src.removeAttribute('data-src');
+        });
+        const vid = clone.querySelector('video');
+        if (vid) { vid.load(); vid.play().catch(()=>{}); }
         track.appendChild(clone);
       });
     }
@@ -1242,16 +1250,22 @@ document.querySelectorAll('.stat-n[data-target]').forEach(el => counterObserver.
 
   fillTrack();
 
-  // One set = 5 items × 90px + 4 gaps × 10px = 490px
-  const setWidth = 5 * itemW + 4 * gap;
+  // Measure the exact pixel width of ONE full set after DOM is ready
+  // setWidth = sum of all original items width + gaps
+  function getSetWidth() {
+    let w = 0;
+    origItems.forEach(item => { w += item.offsetWidth + gap; });
+    return w;
+  }
 
   let pos = 0;
   const speed = 0.5;
+  let setWidth = 0;
 
   function animate() {
+    if (!setWidth) setWidth = getSetWidth();
     pos += speed;
-    // Reset when we've scrolled exactly one set width — seamless
-    if (pos >= setWidth + gap) pos -= setWidth + gap;
+    if (pos >= setWidth) pos -= setWidth; // seamless reset at exact set boundary
     track.style.transform = `translateX(-${pos}px)`;
     requestAnimationFrame(animate);
   }
