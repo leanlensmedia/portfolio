@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Lean Lens Media — YouTube Growth for Fitness Creators</title>
+<title>Lean Lens Media | YouTube Growth for Fitness Creators</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -19,13 +19,7 @@
 }
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:15px;line-height:1.65;overflow-x:hidden}
-body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;background:
-  radial-gradient(ellipse 100% 35% at 50% 100%, rgba(197,103,236,.18) 0%, rgba(28,69,234,.12) 35%, transparent 65%),
-  radial-gradient(ellipse 40% 25% at 20% 85%, rgba(28,69,234,.1) 0%, transparent 60%),
-  radial-gradient(ellipse 40% 25% at 80% 85%, rgba(227,74,235,.09) 0%, transparent 60%),
-  radial-gradient(ellipse 80% 20% at 50% 95%, rgba(255,100,255,.06) 0%, transparent 50%)}
-body::after{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;background:
-  linear-gradient(to bottom, transparent 40%, rgba(3,3,10,.3) 75%, rgba(3,3,10,.6) 100%)}
+body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(ellipse 120% 60% at 50% 110%,rgba(197,103,236,.12) 0%,rgba(28,69,234,.08) 40%,transparent 70%),radial-gradient(ellipse 60% 40% at 10% 90%,rgba(28,69,234,.08) 0%,transparent 50%),radial-gradient(ellipse 60% 40% at 90% 90%,rgba(227,74,235,.07) 0%,transparent 50%)}
 body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse at 20% 0%,rgba(123,94,167,.12) 0%,transparent 55%),radial-gradient(ellipse at 80% 100%,rgba(77,121,255,.08) 0%,transparent 55%);pointer-events:none;z-index:0}
 
 /* CANVAS */
@@ -203,9 +197,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 28px;height:68px;d
 
 /* PACKAGES */
 .packages-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;align-items:stretch}
-.pkg-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:38px 24px 24px;backdrop-filter:blur(6px);display:flex;flex-direction:column;position:relative;transition:all .2s;text-align:center;box-sizing:border-box}
+.pkg-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:28px 24px 24px;backdrop-filter:blur(6px);display:flex;flex-direction:column;position:relative;transition:all .2s;text-align:center;box-sizing:border-box}
 .pkg-card:hover{border-color:var(--accent);color:#fff;background:linear-gradient(135deg,rgba(192,132,252,.18),rgba(77,121,255,.14));box-shadow:0 0 24px rgba(192,132,252,.12)}
-.pkg-card.featured{border-color:rgba(192,132,252,.4);background:rgba(192,132,252,.05);margin-top:0;padding-top:38px}
+.pkg-card.featured{border-color:rgba(192,132,252,.4);background:rgba(192,132,252,.05);margin-top:0;padding-top:52px}
 .pkg-card.featured::before{content:'Most popular';position:absolute;top:0;left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:3px 10px;background:linear-gradient(135deg,var(--accent),var(--blue));color:#fff;border-radius:0 0 5px 5px;white-space:nowrap}
 .pkg-name{font-family:var(--display);font-size:20px;font-weight:400;letter-spacing:.06em;margin-bottom:6px;margin-top:8px;min-height:28px;display:flex;align-items:center;justify-content:center}
 .pkg-price{font-family:var(--display);font-size:38px;font-weight:400;letter-spacing:.02em;background:linear-gradient(135deg,#e0a0ff,#a0c0ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:4px;filter:drop-shadow(0 0 8px rgba(197,103,236,.5)) drop-shadow(0 0 20px rgba(28,69,234,.3))}
@@ -259,7 +253,7 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
   .stats{grid-template-columns:1fr}
   .featured-card{padding:24px}
   .contact-inner{padding:32px 24px}
-  .pkg-card.featured{margin-top:16px}
+  .pkg-card.featured{margin-top:16px;padding-top:52px}
   .vsl-grid{grid-template-columns:1fr}
   .about-grid{grid-template-columns:1fr;gap:24px;text-align:center}
   .about-photos-col{flex-direction:row;gap:10px;justify-content:center}
@@ -275,8 +269,8 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
 .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .hamburger.open span:nth-child(2){opacity:0}
 .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-.mobile-menu{position:fixed;top:0;right:-280px;width:280px;height:100vh;background:rgba(6,6,15,.97);backdrop-filter:blur(20px);border-left:1px solid var(--border);z-index:150;transition:right .3s ease;padding:90px 32px 40px;display:flex;flex-direction:column;gap:0}
-.mobile-menu.open{right:0}
+.mobile-menu{position:fixed;top:0;left:-280px;width:280px;height:100vh;background:rgba(6,6,15,.97);backdrop-filter:blur(20px);border-right:1px solid var(--border);z-index:150;transition:left .3s ease;padding:90px 32px 40px;display:flex;flex-direction:column;gap:0}
+.mobile-menu.open{left:0}
 .mobile-menu a{display:block;font-family:var(--display);font-size:28px;font-weight:400;letter-spacing:.06em;color:#fff;text-decoration:none;padding:12px 0;border-bottom:1px solid var(--border);transition:color .2s}
 .mobile-menu a:hover,.mobile-menu a:active{color:var(--accent)}
 .mobile-menu a:last-child{border-bottom:none}
@@ -318,6 +312,9 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
 <!-- NAV -->
 <nav>
   <div class="nav-logo-wrap" style="display:flex;align-items:center;gap:10px">
+    <button class="hamburger" id="hamburger-btn" onclick="toggleMobileMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
     <img src="logo.png" alt="Lean Lens Media" style="height:28px;width:auto" onerror="this.style.display='none'" />
     <div class="nav-logo">Lean Lens Media</div>
   </div>
@@ -332,9 +329,6 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
   <div style="display:flex;align-items:center;gap:10px">
     <button onclick="toggleLang()" id="lang-btn" style="background:none;border:1px solid var(--border2);color:var(--muted2);font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:5px;cursor:pointer;transition:all .2s">🇪🇸 ES</button>
     <a href="#contact" class="nav-cta" data-i18n="nav-cta">Work with us</a>
-    <button class="hamburger" id="hamburger-btn" onclick="toggleMobileMenu()" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
   </div>
 </nav>
 
@@ -474,6 +468,14 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
   </div>
 </div>
 
+<div style="text-align:center;padding:12px 0 8px;font-family:var(--mono);font-size:11px;color:var(--muted2);letter-spacing:.04em">
+  <div style="display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:4px">
+    <span class="flag">🇺🇸</span> <strong style="color:var(--accent)">English</strong> &amp; <span class="flag">🇪🇸</span> <strong style="color:var(--accent)">Spanish</strong>
+  </div>
+  <div style="font-size:10px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:2px" data-i18n="bilingual-sub">Content Production</div>
+  <div style="font-size:10px;color:var(--accent);letter-spacing:.14em;text-transform:uppercase" data-i18n="bilingual-miami">📍 Based in Miami</div>
+</div>
+
 <div class="wrap" style="margin-top:0">
   <!-- STATS -->
   <div class="stats">
@@ -494,18 +496,13 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
       <div class="stat-l" data-i18n="stat4">Top creators<br>who trusted us</div>
     </div>
   </div>
-  <div class="bilingual-badge">
-    <div class="lang-line" data-i18n="bilingual-lang"><span class="flag">🇺🇸</span> <strong>English</strong> &amp; <span class="flag">🇪🇸</span> <strong>Spanish</strong></div>
-    <div class="sub-line" data-i18n="bilingual-sub">Content Production</div>
-    <div class="sub-line" style="color:var(--accent);letter-spacing:.14em;margin-top:4px" data-i18n="bilingual-miami">📍 Based in Miami</div>
-  </div>
 </div>
 
 <section class="hero" style="padding-top:0;min-height:auto">
   <div class="wrap">
     <div class="hero-inner" style="padding-top:24px;padding-bottom:36px">
       <h2 class="hero-h1" style="margin-bottom:20px"><span class="line1" data-i18n="hero-h2a">by building</span><span class="line2" data-i18n="hero-h2b">authentically organic content.</span></h2>
-      <p class="hero-sub" style="font-size:18px;max-width:600px;line-height:1.5" data-i18n="hero-sub">So your audience trusts you enough to buy — we handle the edit, the strategy, and the packaging.</p>
+      <p class="hero-sub" style="font-size:18px;max-width:600px;line-height:1.5" data-i18n="hero-sub">So your audience trusts you enough to buy. We handle the edit, the strategy, and the packaging.</p>
       <div style="display:flex;flex-direction:column;align-items:center;gap:2px;margin-bottom:16px">
         <span class="hero-sub2" style="margin-bottom:0" data-i18n="hero-sub2a">You film.</span>
         <span class="hero-sub2" style="margin-bottom:0" data-i18n="hero-sub2b">We handle everything else.</span>
@@ -541,7 +538,7 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
       <div class="fc-badge" data-i18n="c-saturno-badge">100K → 1M subscribers</div>
       <div class="fc-name">Saturno Movement</div>
       <div class="fc-role" data-i18n="c-saturno-role">Full creative partnership · 2019 – 2025</div>
-      <p class="fc-desc" data-i18n="c-saturno-desc">Responsible for the entire content operation — editing, filming, hooks, graphics, branding, and strategy across short-form and long-form. Built from the ground up over six years. This is what full commitment looks like.</p>
+      <p class="fc-desc" data-i18n="c-saturno-desc">Responsible for the entire content operation. Editing, filming, hooks, graphics, branding, and strategy across short-form and long-form. Built from the ground up over six years. This is what full commitment looks like.</p>
       <div class="fc-links">
         <div class="video-dropdown">
           <button type="button" class="video-dropdown-toggle" data-i18n="btn-view-videos" onclick="toggleVideoDropdown(this)">View videos</button>
@@ -570,7 +567,7 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
       <div class="fc-badge" data-i18n="c-leo-badge">Current client</div>
       <div class="fc-name">LeoMoves</div>
       <div class="fc-role" data-i18n="c-leo-role">Content Production & Strategy</div>
-      <p class="fc-desc" data-i18n="c-leo-desc">Full video packaging for the top movement coach in the industry — editing, hook strategy, titles, thumbnails, and content planning. Every video is produced and built around a framework before a single frame is cut.</p>
+      <p class="fc-desc" data-i18n="c-leo-desc">Full video packaging for the top movement coach in the industry. Editing, hook strategy, titles, thumbnails, and content planning. Every video is built around a framework before a single frame is cut.</p>
       <div class="fc-links">
         <div class="video-dropdown">
           <button type="button" class="video-dropdown-toggle" data-i18n="btn-view-videos" onclick="toggleVideoDropdown(this)">View videos</button>
@@ -626,7 +623,7 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
       <div class="fc-badge" data-i18n="c-stpete-badge">Growing</div>
       <div class="fc-name">Saint Pete Calisthenics</div>
       <div class="fc-role" data-i18n="c-stpete-role">Channel Build from Scratch</div>
-      <p class="fc-desc" data-i18n="c-stpete-desc">Under 100 subscribers at the start. Videos packaged four months ago are now gaining traction. Proof the system works at any size — not just established channels.</p>
+      <p class="fc-desc" data-i18n="c-stpete-desc">Under 100 subscribers at the start. Videos packaged four months ago are now gaining traction. Proof the system works at any size. Not just established channels.</p>
       <div class="fc-links">
         <div class="video-dropdown">
           <button type="button" class="video-dropdown-toggle" data-i18n="btn-view-videos" onclick="toggleVideoDropdown(this)">View videos</button>
@@ -645,8 +642,8 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
       </div>
       <div class="fc-badge" data-i18n="c-emb-badge">En Español</div>
       <div class="fc-name">EmbodyWay</div>
-      <div class="fc-role" data-i18n="c-emb-role">Content Production — Spanish Language</div>
-      <p class="fc-desc" data-i18n="c-emb-desc">Spanish-language fitness content — produced for the Spanish-speaking audience that makes up a massive and underserved segment of the fitness creator space. Proof that the system works in any language.</p>
+      <div class="fc-role" data-i18n="c-emb-role">Content Production in Spanish</div>
+      <p class="fc-desc" data-i18n="c-emb-desc">Spanish-language fitness content produced for a massive and underserved audience in the fitness creator space. Proof that the system works in any language.</p>
       <div class="fc-links">
         <a href="https://www.instagram.com/embodyway" target="_blank" rel="noopener" class="video-dropdown-toggle" style="text-decoration:none;display:flex;align-items:center;justify-content:center;gap:6px;width:100%">📸 Instagram</a>
         <a href="https://www.youtube.com/@embodyway" target="_blank" rel="noopener" class="video-dropdown-toggle" style="text-decoration:none;display:flex;align-items:center;justify-content:center;gap:6px;width:100%">▶ YouTube</a>
@@ -660,7 +657,7 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
       <div class="fc-badge" data-i18n="c-summer-badge">Project work</div>
       <div class="fc-name">SummerfunFitness</div>
       <div class="fc-role" data-i18n="c-summer-role">Content Production</div>
-      <p class="fc-desc" data-i18n="c-summer-desc">Two videos produced for this established fitness creator — content packaged for clarity and retention.</p>
+      <p class="fc-desc" data-i18n="c-summer-desc">Two videos produced for this established fitness creator. Content packaged for clarity and retention.</p>
       <div class="fc-links">
         <div class="video-dropdown">
           <button type="button" class="video-dropdown-toggle" data-i18n="btn-view-videos" onclick="toggleVideoDropdown(this)">View videos</button>
@@ -680,7 +677,7 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
       <div class="fc-badge" data-i18n="c-andry-badge">Editing & Filming</div>
       <div class="fc-name">Andry Strong</div>
       <div class="fc-role" data-i18n="c-andry-role">Video Production & On-Location Filming</div>
-      <p class="fc-desc" data-i18n="c-andry-desc">Filmed two videos for his channel on location and edited one — hands-on production from behind the camera to the final cut.</p>
+      <p class="fc-desc" data-i18n="c-andry-desc">Filmed two videos on location and edited one. Hands-on production from behind the camera to the final cut.</p>
       <div class="fc-links">
         <div class="video-dropdown">
           <button type="button" class="video-dropdown-toggle" data-i18n="btn-view-videos" onclick="toggleVideoDropdown(this)">View videos</button>
@@ -728,9 +725,9 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
         <div class="about-badge" data-i18n="about-badge7">7+ years editing</div>
         <div class="about-badge" data-i18n="about-badge">10+ year athlete</div>
         <div class="about-name">Fabian Diaz</div>
-        <div class="about-role">Founder & Editor — Lean Lens Media</div>
-        <p class="about-desc" data-i18n="about-desc1">I've been a calisthenics athlete for over ten years. That's not something I mention just to sound credible. It's genuinely the reason I'm good at this. I know what a solid rep looks like. I know how workouts are programmed. I know how the body moves because I've spent years moving mine.</p>
-        <p class="about-desc" data-i18n="about-desc2">So when a client sends me footage of a handstand, a mobility flow, or a movement tutorial, I already get it. I know what the person watching wants to learn and why they clicked. That changes how I edit. It's not just about making things look good. It's about making content that actually connects.</p>
+        <div class="about-role">Founder and Editor at Lean Lens Media</div>
+        <p class="about-desc" data-i18n="about-desc1">I have been training calisthenics for over ten years. Not to sound credible. It is genuinely why I am good at this. I know what a solid rep looks like, how workouts are programmed, and how the body moves. Because I have spent years moving mine.</p>
+        <p class="about-desc" data-i18n="about-desc2">When a client sends me footage of a handstand, a mobility flow, or a movement tutorial, I already get it. I know what the person watching wants to learn and why they clicked. That changes how I edit. It is not just about making things look good. It is about making content that actually connects.</p>
         <div class="about-tags" id="about-tags">
           <span class="about-tag">Calisthenics</span>
           <span class="about-tag">Freestyle Calisthenics</span>
@@ -765,7 +762,7 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
   <div class="wrap">
     <div class="section-label" data-i18n="services-label">What we do</div>
     <h2 class="section-h" data-i18n="services-h">The full stack.<br>Or just what you need.</h2>
-    <p class="section-sub" data-i18n="services-sub">Most agencies do one thing.<br>We cover the whole content operation — so you can stay in front of the camera.</p>
+    <p class="section-sub" data-i18n="services-sub">Most agencies do one thing.<br>We cover the whole content operation so you can stay in front of the camera.</p>
     <div class="services-grid">
       <div class="service-card" onclick="toggleService(this)">
         <div class="service-name-row">
@@ -774,7 +771,7 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
         <p class="service-desc" data-i18n="svc1-desc">Long-form YouTube editing and short-form clips built for retention. Every cut has a reason. Every video is optimized before it goes live.</p>
         <div class="service-cue-row"><span class="service-expand-icon" style="width:18px;height:18px;font-size:11px">⌄</span><span class="service-expand-cue" data-i18n="cue-learn">Click to learn more</span></div>
         <div class="service-more">
-          <div class="service-more-inner" data-i18n="svc1-more">We start with the footage you film and turn it into a finished video built around retention — pacing the first 30 seconds to hook, cutting dead air, layering captions and sound design, and structuring the edit so the story never lets attention drop. Each long-form video also gets cut down into short-form clips designed for the algorithm of whatever platform they land on, not just resized — re-cut, re-paced, and re-hooked for vertical viewing.</div>
+          <div class="service-more-inner" data-i18n="svc1-more">We start with the footage you film and turn it into a finished video built around retention. We pace the first 30 seconds to hook, cut dead air, layer captions and sound design, and structure the edit so the story holds. Each long-form video also gets cut into short-form clips designed for each platform. Not resized. Re-cut and re-paced for vertical viewing.</div>
         </div>
       </div>
       <div class="service-card" onclick="toggleService(this)">
@@ -784,7 +781,7 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
         <p class="service-desc" data-i18n="svc2-desc">Blueprints, hook strategy, title testing, thumbnail direction, and monthly content planning. The thinking that makes the editing work.</p>
         <div class="service-cue-row"><span class="service-expand-icon" style="width:18px;height:18px;font-size:11px">⌄</span><span class="service-expand-cue" data-i18n="cue-learn">Click to learn more</span></div>
         <div class="service-more">
-          <div class="service-more-inner" data-i18n="svc2-more">Before anything gets filmed, we build the blueprint — what the video promises in the first line, how it's structured to deliver on that promise, and what title and thumbnail combination gives it the best shot at being clicked. We track what's working across the channel and feed that back into the next month's content plan, so growth compounds instead of resetting every video.</div>
+          <div class="service-more-inner" data-i18n="svc2-more">Before anything gets filmed, we build the blueprint. What the video promises, how it delivers, and what title and thumbnail gives it the best shot at getting clicked. We track what works and feed that back into the next month so growth compounds.</div>
         </div>
       </div>
       <div class="service-card" onclick="toggleService(this)">
@@ -794,7 +791,7 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
         <p class="service-desc" data-i18n="svc3-desc">Uploading, descriptions, chapters, analytics review, and community posts. The channel runs without you having to touch it.</p>
         <div class="service-cue-row"><span class="service-expand-icon" style="width:18px;height:18px;font-size:11px">⌄</span><span class="service-expand-cue" data-i18n="cue-learn">Click to learn more</span></div>
         <div class="service-more">
-          <div class="service-more-inner" data-i18n="svc3-more">Once a video is ready, we handle everything that gets it in front of an audience — uploading on schedule, writing descriptions and chapters, reviewing analytics weekly to see what's actually performing, and keeping the community tab active. You film. The channel itself becomes something you don't have to think about.</div>
+          <div class="service-more-inner" data-i18n="svc3-more">Once a video is ready, we handle everything that gets it in front of an audience. Uploading on schedule, writing descriptions and chapters, reviewing analytics weekly, and keeping the community tab active. You film. The channel becomes something you do not have to think about.</div>
         </div>
       </div>
     </div>
@@ -808,7 +805,7 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
   <div class="wrap">
     <div class="section-label" data-i18n="vsl-label">Beyond organic</div>
     <h2 class="section-h">VSLs & paid ads that<br>actually convert.</h2>
-    <p class="section-sub" data-i18n="vsl-sub">When your content grows an audience, the next move is selling to them. That's where VSLs and paid ad creative come in — and it's something I've done, not just edited.</p>
+    <p class="section-sub" data-i18n="vsl-sub">When your content grows an audience, the next move is selling to them. That is where VSLs and paid ad creative come in. And it is something I have done, not just edited.</p>
     <div class="vsl-grid">
       <div class="vsl-card accent" onclick="toggleVsl(this)">
         <div class="vsl-title-row">
@@ -816,7 +813,7 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
         </div>
         <p class="vsl-desc-short" data-i18n="vsl1-short">The video that closes. I script, structure, and edit VSLs built around the outcome your audience actually wants.</p>
         <div class="vsl-cue-row"><span class="vsl-expand-icon">⌄</span><span class="vsl-expand-cue">Click to learn more</span></div>
-        <div class="vsl-desc-more" data-i18n="vsl1-more">Whether that's a course, a coaching program, or a digital product — the goal isn't just a polished video; it's one that converts cold viewers into buyers.
+        <div class="vsl-desc-more" data-i18n="vsl1-more">Whether it is a course, a program, or a digital product, the goal is not just a polished video. It is one that converts cold viewers into buyers.
           <div class="vsl-proof" style="margin-top:12px"><span class="vsl-proof-dot"></span>Built and produced VSLs for fitness programs and online coaches</div>
         </div>
       </div>
@@ -824,9 +821,9 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
         <div class="vsl-title-row">
           <div class="vsl-title" data-i18n="vsl2-title"><span class="vsl-icon">📣</span>Paid Ad Creative</div>
         </div>
-        <p class="vsl-desc-short" data-i18n="vsl2-short">Short-form video ads designed to stop the scroll and push people into your funnel — built for performance, not just looks.</p>
+        <p class="vsl-desc-short" data-i18n="vsl2-short">Short-form video ads designed to stop the scroll and push people into your funnel. Built for performance, not just looks.</p>
         <div class="vsl-cue-row"><span class="vsl-expand-icon">⌄</span><span class="vsl-expand-cue">Click to learn more</span></div>
-        <div class="vsl-desc-more" data-i18n="vsl2-more">Produced ad creative for fitness programs that ran on Meta and converted. Strong hooks, fast pacing, and a clear call to action before the viewer can leave.
+        <div class="vsl-desc-more" data-i18n="vsl2-more">Produced ad creative for fitness programs that ran on Meta and converted. Strong hooks, fast pacing, and a clear call to action before the viewer leaves.
           <div class="vsl-proof" style="margin-top:12px"><span class="vsl-proof-dot"></span>Successfully run paid campaigns with positive conversion results</div>
         </div>
       </div>
@@ -834,13 +831,13 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
         <div class="vsl-title-row">
           <div class="vsl-title" data-i18n="vsl3-title"><span class="vsl-icon">💡</span>Why this matters for fitness creators?</div>
         </div>
-        <p class="vsl-desc-short" data-i18n="vsl3-short">Most fitness creators lose money when they try to monetize — because their editor doesn't understand how to sell.</p>
+        <p class="vsl-desc-short" data-i18n="vsl3-short">Most fitness creators lose money when they try to monetize. Their editor does not understand how to sell.</p>
         <div class="vsl-cue-row"><span class="vsl-expand-icon">⌄</span><span class="vsl-expand-cue">Click to learn more</span></div>
-        <div class="vsl-desc-more" data-i18n="vsl3-more">I do. I understand workout programming, how your audience thinks, what they're afraid of, and what they actually want from a program. That context changes everything about how a sales video is written and cut.</div>
+        <div class="vsl-desc-more" data-i18n="vsl3-more">I do. I understand workout programming, how your audience thinks, what they are afraid of, and what they actually want from a program. That context changes everything about how a sales video is written and cut.</div>
       </div>
     </div>
     <div style="text-align:center;font-family:var(--mono);font-size:12px;color:var(--muted2);margin-top:28px;line-height:1;display:flex;flex-direction:column;gap:10px;align-items:center">
-    <span data-i18n="vsl-price1">VSLs &amp; paid ad creative — scoped per project</span>
+    <span data-i18n="vsl-price1">VSLs and paid ad creative scoped per project</span>
     <span data-i18n="vsl-price2">Starting from <strong style="color:var(--accent)">$500</strong> for short-form ads</span>
     <a href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;" style="color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(192,132,252,.3);padding-bottom:1px" data-i18n="vsl-price3">Reach out for a custom quote →</a>
   </div>
@@ -865,7 +862,10 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
         <ul class="pkg-items">
           <li>8–10 short-form clips</li>
           <li>Captions included</li>
-          <li>Basic motion graphics</li>
+          <li>Sound effects and pacing</li>
+          <li>Hook optimization</li>
+          <li>Professional animated shorts</li>
+          <li>Brand matched visual style</li>
           <li>No long-form involved</li>
         </ul>
         <div class="pkg-best" data-i18n="pkg1-best">Best for creators who want consistent short-form presence without long-form complexity.</div>
@@ -874,17 +874,19 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
       <!-- Content Production -->
       <div class="pkg-card">
         <div class="pkg-name" data-i18n="pkg2-name">Content Production</div>
-        <div style="display:flex;flex-direction:column;align-items:center;gap:2px;margin-bottom:4px">
-          <div style="font-family:var(--display);font-size:22px;font-weight:400;color:var(--muted);text-decoration:line-through;letter-spacing:.02em;-webkit-text-fill-color:var(--muted)">$1,800 USD</div>
-          <div class="pkg-price" style="margin-bottom:0">$1,650 <span style="font-size:12px;font-family:var(--sans);font-weight:600;letter-spacing:.08em;-webkit-text-fill-color:var(--muted2);color:var(--muted2);background:none;margin-left:-2px">USD</span></div>
+        <div class="pkg-price" style="margin-bottom:2px">$1,500 <span style="font-size:12px;font-family:var(--sans);font-weight:600;letter-spacing:.08em;-webkit-text-fill-color:var(--muted2);color:var(--muted2);background:none;margin-left:-2px">USD</span></div>
+        <div style="font-family:var(--mono);font-size:9px;color:var(--accent);letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px">First month only</div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:0;margin-bottom:8px">
+          <div style="font-family:var(--display);font-size:14px;font-weight:400;color:var(--muted);text-decoration:line-through;letter-spacing:.02em;-webkit-text-fill-color:var(--muted);line-height:1.2">$1,800 USD</div>
+          <div style="font-family:var(--mono);font-size:8px;color:var(--muted);letter-spacing:.04em;line-height:1.2">per month after</div>
         </div>
-        <div style="font-family:var(--mono);font-size:9px;color:var(--accent);letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px">First month only</div>
-        <div class="pkg-per" style="margin-bottom:16px">$1,800 USD / month after</div>
         <div class="pkg-divider"></div>
         <ul class="pkg-items">
           <li>3 long-form videos edited</li>
           <li>Thumbnail per video</li>
-          <li>2 shorts per video</li>
+          <li>2 professional animated shorts</li>
+          <li>Sound effects and pacing optimization</li>
+          <li>Hook optimization per video</li>
           <li>Hook scripts written</li>
           <li>Monthly content plan</li>
           <li>Video blueprints</li>
@@ -904,6 +906,7 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
           <li>4 videos per month</li>
           <li>Channel management</li>
           <li>Uploading to YouTube</li>
+          <li>Community posts and polls</li>
           <li>Analytics review</li>
           <li>Monthly strategy call</li>
         </ul>
@@ -938,7 +941,7 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
     <div class="contact-inner">
       <div class="section-label" data-i18n="contact-label">Contact</div>
       <h2 class="contact-h" data-i18n="contact-h">Let's talk.</h2>
-      <p class="contact-sub" data-i18n="contact-sub">If you're a fitness creator, coach, or educator<br>who knows your content should be working harder for you —<br>we'll tell you honestly whether we're a fit.</p>
+      <p class="contact-sub" data-i18n="contact-sub">If you are a fitness creator, coach, or educator<br>who knows your content should be working harder for you,<br>we will tell you honestly whether we are a fit.</p>
       <p class="contact-sub" style="margin-top:-20px;margin-bottom:28px;font-size:13px;color:var(--muted)" data-i18n="contact-reach">Please reach out below.</p>
       <div class="contact-links">
         <a href="mailto:leanlensmedia@gmail.com" class="contact-link"><span>✉</span> leanlensmedia@gmail.com</a>
@@ -1095,65 +1098,29 @@ addVideos('socialclub-videos', [
   { id: 'PASTE_ID', title: 'Video Name Here' },
 ]);
 
-// Miami Night Drive
+// Starfield
 (function(){
   const canvas = document.getElementById('starfield');
   const ctx = canvas.getContext('2d');
-  let W, H, stars = [], streaks = [], buildings = [];
-
-  function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; initScene(); }
-
-  function mkStar() { return { x:Math.random()*W, y:Math.random()*H*0.58, r:Math.random()*1.2+0.2, alpha:Math.random()*.5+.1, twinkle:Math.random()*Math.PI*2, ts:Math.random()*.015+.003 }; }
-
-  function mkStreak() {
-    const side = Math.random() > 0.5 ? 1 : -1;
-    return { x:W/2+side*(W*0.05+Math.random()*W*0.22), y:H*(0.52+Math.random()*0.12), len:20+Math.random()*70, speed:2+Math.random()*5, alpha:Math.random()*.6+.2, color:Math.random()>0.5?'rgba(197,103,236,':'rgba(28,69,234,' };
-  }
-
-  function mkBuildings() {
-    buildings = [];
-    const hy = H*0.62; let x = 0;
-    while(x < W) {
-      const bw = 18+Math.random()*55, bh = 15+Math.random()*75;
-      const wins = Array.from({length:Math.floor(Math.random()*5)},()=>({wx:Math.random()*(bw-4)+2,wy:Math.random()*bh*0.8+bh*0.05,wc:Math.random()>0.5?'rgba(197,103,236,0.85)':'rgba(28,69,234,0.7)'}));
-      buildings.push({x,y:hy-bh,w:bw,h:bh,wins});
-      x += bw+1+Math.random()*8;
-    }
-  }
-
-  function initScene() { stars=Array.from({length:180},mkStar); streaks=Array.from({length:10},mkStreak); mkBuildings(); }
-
-  function drawRoad() {
-    const hy=H*0.65, vx=W/2;
-    const rg=ctx.createLinearGradient(0,hy,0,H);
-    rg.addColorStop(0,'rgba(5,2,20,0.92)'); rg.addColorStop(1,'rgba(8,3,28,0.96)');
-    ctx.fillStyle=rg;
-    ctx.beginPath(); ctx.moveTo(vx-W*0.015,hy); ctx.lineTo(vx+W*0.015,hy); ctx.lineTo(W,H); ctx.lineTo(0,H); ctx.fill();
-    const rg2=ctx.createRadialGradient(vx,H*0.88,0,vx,H*0.88,W*0.38);
-    rg2.addColorStop(0,'rgba(197,103,236,0.07)'); rg2.addColorStop(1,'transparent');
-    ctx.fillStyle=rg2; ctx.fillRect(0,hy,W,H-hy);
-    for(let i=0;i<7;i++){const t=(i+0.5)/7,dy=hy+(H-hy)*t,dh=(H-hy)*0.055*t,dw=3.5*t;ctx.fillStyle=`rgba(197,103,236,${0.28*t})`;ctx.fillRect(vx-dw/2,dy,dw,dh);}
-  }
-
-  function draw() {
+  let stars = [], W, H;
+  function resize(){ W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
+  function mkStar(){ return { x:Math.random()*W, y:Math.random()*H, r:Math.random()*1.4+0.2, alpha:Math.random()*.55+.1, speed:Math.random()*.08+.01, twinkle:Math.random()*Math.PI*2, ts:Math.random()*.02+.004 }; }
+  function init(){ resize(); stars = Array.from({length:220}, mkStar); }
+  function draw(){
     ctx.clearRect(0,0,W,H);
-    // Stars
-    stars.forEach(s=>{s.twinkle+=s.ts;const a=s.alpha*(0.5+0.5*Math.sin(s.twinkle));const cols=['rgba(197,103,236,','rgba(28,69,234,','rgba(227,74,235,','rgba(200,210,255,'];ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fillStyle=cols[Math.floor(s.x*4/W)%4]+a+')';ctx.fill();});
-    // Horizon glow
-    const hg=ctx.createLinearGradient(0,H*0.54,0,H*0.68);
-    hg.addColorStop(0,'transparent');hg.addColorStop(0.4,'rgba(197,103,236,0.09)');hg.addColorStop(0.7,'rgba(28,69,234,0.06)');hg.addColorStop(1,'transparent');
-    ctx.fillStyle=hg;ctx.fillRect(0,H*0.54,W,H*0.15);
-    // Buildings
-    buildings.forEach(b=>{ctx.fillStyle=`rgba(8,3,18,0.92)`;ctx.fillRect(b.x,b.y,b.w,b.h);b.wins.forEach(w=>{ctx.fillStyle=w.wc;ctx.fillRect(b.x+w.wx,b.y+w.wy,2.5,2.5);});ctx.strokeStyle='rgba(197,103,236,0.18)';ctx.lineWidth=0.5;ctx.strokeRect(b.x,b.y,b.w,b.h);});
-    // Road
-    drawRoad();
-    // Speed streaks
-    streaks.forEach(s=>{s.y+=s.speed;if(s.y>H*0.78){Object.assign(s,mkStreak());s.y=H*0.5;}ctx.strokeStyle=s.color+s.alpha+')';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(s.x,s.y);ctx.lineTo(s.x,s.y+s.len*(s.y/H));ctx.stroke();});
+    stars.forEach(s=>{
+      s.twinkle+=s.ts; s.y-=s.speed;
+      if(s.y<-2){s.y=H+2;s.x=Math.random()*W;}
+      const a=s.alpha*(0.5+0.5*Math.sin(s.twinkle));
+      const colors=['rgba(197,103,236,','rgba(28,69,234,','rgba(227,74,235,','rgba(200,200,255,'];
+      const col=colors[Math.floor(s.x*4/W)%colors.length];
+      ctx.fillStyle=col+a+')';
+      ctx.beginPath(); ctx.arc(s.x,s.y,s.r,0,Math.PI*2); ctx.fill();
+    });
     requestAnimationFrame(draw);
   }
-
   window.addEventListener('resize', resize);
-  resize();
+  init(); draw();
 })();
 
 // Scroll reveal
@@ -1313,7 +1280,7 @@ const TRANSLATIONS = {
     'hero-pill': 'Organic Content',
     'hero-platforms': 'YouTube · Instagram · Short-Form · Long-Form',
     'hero-seo': 'SEO optimized for search & discovery',
-    'hero-sub': 'So your audience trusts you enough to buy — we handle the edit, the strategy, and the packaging.',
+    'hero-sub': 'So your audience trusts you enough to buy. We handle the edit, the strategy, and the packaging.',
     'hero-sub2': 'You film. We handle everything else.',
     'hero-cta1': 'Start a conversation',
     'hero-cta2': 'See our work',
@@ -1328,20 +1295,20 @@ const TRANSLATIONS = {
     'about-h': "I don't just edit fitness content.<br>I live it.",
     'about-badge7': '7+ years editing',
     'about-badge': '10+ year athlete',
-    'about-role': 'Founder & Editor — Lean Lens Media',
+    'about-role': 'Founder and Editor at Lean Lens Media',
     'services-label': 'What we do',
     'services-h': 'The full stack.<br>Or just what you need.',
-    'services-sub': 'Most agencies do one thing.<br>We cover the whole content operation — so you can stay in front of the camera.',
+    'services-sub': 'Most agencies do one thing.<br>We cover the whole content operation so you can stay in front of the camera.',
     'vsl-label': 'Beyond organic',
     'vsl-h': 'VSLs & paid ads that<br>actually convert.',
-    'vsl-sub': "When your content grows an audience, the next move is selling to them. That's where VSLs and paid ad creative come in — and it's something I've done, not just edited.",
+    'vsl-sub': "When your content grows an audience, the next move is selling to them. That is where VSLs and paid ad creative come in. And it is something I have done, not just edited.",
     'pkg-label': 'Packages',
     'pkg-h': 'Pick your level<br>of involvement.',
     'pkg-sub': 'Every package is a monthly retainer. Minimum two-month commitment so we can actually move the needle.',
     'pkg-note': 'All packages are monthly retainers · Minimum 2-month commitment',
-    'vsl1-more': "Whether that's a course, a coaching program, or a digital product — the goal isn't just a polished video; it's one that converts cold viewers into buyers.",
-    'vsl2-more': 'Produced ad creative for fitness programs that ran on Meta and converted. Strong hooks, fast pacing, and a clear call to action before the viewer can leave.',
-    'vsl3-more': "I do. I understand workout programming, how your audience thinks, what they're afraid of, and what they actually want from a program. That context changes everything about how a sales video is written and cut.",
+    'vsl1-more': "Whether it is a course, a program, or a digital product, the goal is not just a polished video. It is one that converts cold viewers into buyers.",
+    'vsl2-more': 'Produced ad creative for fitness programs that ran on Meta and converted. Strong hooks, fast pacing, and a clear call to action before the viewer leaves.',
+    'vsl3-more': "I do. I understand workout programming, how your audience thinks, what they are afraid of, and what they actually want from a program. That context changes everything about how a sales video is written and cut.",
     'stat1': 'Views served across all videos &amp; platforms',
     'stat2': 'Subscribers &amp; followers built through social media',
     'stat3': 'Years in fitness &amp; content production',
@@ -1350,7 +1317,7 @@ const TRANSLATIONS = {
     'bilingual-lang': '<span class="flag">🇺🇸</span> <strong>English</strong> &amp; <span class="flag">🇪🇸</span> <strong>Spanish</strong>',
     'contact-label': 'Contact',
     'contact-h': "Let's talk.",
-    'contact-sub': "If you're a fitness creator, coach, or educator<br>who knows your content should be working harder for you —<br>we'll tell you honestly whether we're a fit.",
+    'contact-sub': "If you are a fitness creator, coach, or educator<br>who knows your content should be working harder for you,<br>we will tell you honestly whether we are a fit.",
     'contact-reach': 'Please reach out below.',
 
     // Bilingual badge
@@ -1360,49 +1327,49 @@ const TRANSLATIONS = {
     // Client badges & roles
     'c-saturno-badge': '100K → 1M subscribers',
     'c-saturno-role': 'Full creative partnership · 2019 – 2025',
-    'c-saturno-desc': 'Responsible for the entire content operation — editing, filming, hooks, graphics, branding, and strategy across short-form and long-form. Built from the ground up over six years. This is what full commitment looks like.',
+    'c-saturno-desc': 'Responsible for the entire content operation. Editing, filming, hooks, graphics, branding, and strategy across short-form and long-form. Built from the ground up over six years. This is what full commitment looks like.',
     'c-leo-badge': 'Current client',
     'c-leo-role': 'Content Production & Strategy',
-    'c-leo-desc': 'Full video packaging for the top movement coach in the industry — editing, hook strategy, titles, thumbnails, and content planning. Every video is produced and built around a framework before a single frame is cut.',
+    'c-leo-desc': 'Full video packaging for the top movement coach in the industry. Editing, hook strategy, titles, thumbnails, and content planning. Every video is built around a framework before a single frame is cut.',
     'c-whealth-badge': 'Current client',
     'c-whealth-role': 'Content Production & Strategy',
     'c-whealth-desc': 'Ongoing short-form and long-form content production for an established pain management brand. Full pipeline from rough cut to upload-ready, every week.',
     'c-stpete-badge': 'Growing',
     'c-stpete-role': 'Channel Build from Scratch',
-    'c-stpete-desc': 'Under 100 subscribers at the start. Videos packaged four months ago are now gaining traction. Proof the system works at any size — not just established channels.',
+    'c-stpete-desc': 'Under 100 subscribers at the start. Videos packaged four months ago are now gaining traction. Proof the system works at any size. Not just established channels.',
     'c-emb-badge': 'En Español',
-    'c-emb-role': 'Content Production — Spanish Language',
-    'c-emb-desc': 'Spanish-language fitness content — produced for the Spanish-speaking audience that makes up a massive and underserved segment of the fitness creator space. Proof that the system works in any language.',
+    'c-emb-role': 'Content Production in Spanish',
+    'c-emb-desc': 'Spanish-language fitness content produced for a massive and underserved audience in the fitness creator space. Proof that the system works in any language.',
     'c-summer-badge': 'Project work',
     'c-summer-role': 'Content Production',
-    'c-summer-desc': 'Two videos produced for this established fitness creator — content packaged for clarity and retention.',
+    'c-summer-desc': 'Two videos produced for this established fitness creator. Content packaged for clarity and retention.',
     'c-andry-badge': 'Editing & Filming',
     'c-andry-role': 'Video Production & On-Location Filming',
-    'c-andry-desc': 'Filmed two videos for his channel on location and edited one — hands-on production from behind the camera to the final cut.',
+    'c-andry-desc': 'Filmed two videos on location and edited one. Hands-on production from behind the camera to the final cut.',
     'c-social-badge': 'Events',
     'c-social-role': 'Event Content Production',
     'c-social-desc': 'Recap videos and short-form highlights that carry the energy of the event into something shareable.',
-    'about-desc1': "I've been a calisthenics athlete for over ten years. That's not something I mention just to sound credible. It's genuinely the reason I'm good at this. I know what a solid rep looks like. I know how workouts are programmed. I know how the body moves because I've spent years moving mine.",
-    'about-desc2': "So when a client sends me footage of a handstand, a mobility flow, or a movement tutorial, I already get it. I know what the person watching wants to learn and why they clicked. That changes how I edit. It's not just about making things look good. It's about making content that actually connects.",
+    'about-desc1': "I have been training calisthenics for over ten years. Not to sound credible. It is genuinely why I am good at this. I know what a solid rep looks like, how workouts are programmed, and how the body moves. Because I have spent years moving mine.",
+    'about-desc2': "When a client sends me footage of a handstand, a mobility flow, or a movement tutorial, I already get it. I know what the person watching wants to learn and why they clicked. That changes how I edit. It is not just about making things look good. It is about making content that actually connects.",
     'svc1-name': '<span class="service-icon">🎬</span> Content Production',
     'svc1-desc': 'Long-form YouTube editing and short-form clips built for retention. Every cut has a reason. Every video is optimized before it goes live.',
-    'svc1-more': 'We start with the footage you film and turn it into a finished video built around retention — pacing the first 30 seconds to hook, cutting dead air, layering captions and sound design, and structuring the edit so the story never lets attention drop. Each long-form video also gets cut down into short-form clips designed for the algorithm of whatever platform they land on.',
+    'svc1-more': 'We start with the footage you film and turn it into a finished video built around retention. We pace the first 30 seconds to hook, cut dead air, layer captions and sound design, and structure the edit so the story never loses attention. Each long-form video also gets cut into short-form clips designed for whatever platform they land on.',
     'svc2-name': '<span class="service-icon">🗺️</span> Strategy & Structure',
     'svc2-desc': 'Blueprints, hook strategy, title testing, thumbnail direction, and monthly content planning. The thinking that makes the editing work.',
-    'svc2-more': "Before anything gets filmed, we build the blueprint — what the video promises in the first line, how it's structured to deliver on that promise, and what title and thumbnail combination gives it the best shot at being clicked. We track what's working across the channel and feed that back into the next month's content plan.",
+    'svc2-more': "Before anything gets filmed, we build the blueprint. What the video promises in the first line, how it delivers on that promise, and what title and thumbnail gives it the best shot at getting clicked. We track what is working and feed that back into the next month's plan.",
     'svc3-name': '<span class="service-icon">💻</span> Channel Management',
     'svc3-desc': 'Uploading, descriptions, chapters, analytics review, and community posts. The channel runs without you having to touch it.',
-    'svc3-more': "Once a video is ready, we handle everything that gets it in front of an audience — uploading on schedule, writing descriptions and chapters, reviewing analytics weekly to see what's actually performing, and keeping the community tab active. You film. The channel itself becomes something you don't have to think about.",
+    'svc3-more': "Once a video is ready, we handle everything that gets it in front of an audience. Uploading on schedule, writing descriptions and chapters, reviewing analytics weekly, and keeping the community tab active. You film. The channel becomes something you do not have to think about.",
     'cue-learn': 'Click to learn more',
     'btn-view-videos': 'View videos',
     'btn-view-shorts': 'View short-form content',
     'vsl1-title': '<span class="vsl-icon">🎯</span>Video Sales Letters (VSLs)',
     'vsl1-short': 'The video that closes. I script, structure, and edit VSLs built around the outcome your audience actually wants.',
     'vsl2-title': '<span class="vsl-icon">📣</span>Paid Ad Creative',
-    'vsl2-short': 'Short-form video ads designed to stop the scroll and push people into your funnel — built for performance, not just looks.',
+    'vsl2-short': 'Short-form video ads designed to stop the scroll and push people into your funnel. Built for performance, not just looks.',
     'vsl3-title': '<span class="vsl-icon">💡</span>Why this matters for fitness creators?',
-    'vsl3-short': "Most fitness creators lose money when they try to monetize — because their editor doesn't understand how to sell.",
-    'vsl-price1': 'VSLs & paid ad creative — scoped per project',
+    'vsl3-short': "Most fitness creators lose money when they try to monetize. Their editor does not understand how to sell.",
+    'vsl-price1': 'VSLs and paid ad creative scoped per project',
     'vsl-price2': 'Starting from <strong style="color:var(--accent)">$500</strong> for short-form ads',
     'vsl-price3': 'Reach out for a custom quote →',
     'pkg1-name': 'Short-Form Only',
@@ -1431,7 +1398,8 @@ const TRANSLATIONS = {
     'hero-pill': 'Contenido Orgánico',
     'hero-platforms': 'YouTube · Instagram · Formato Corto · Formato Largo',
     'hero-seo': 'Optimizado para búsqueda y descubrimiento',
-    'hero-sub': 'Para que tu audiencia confíe en ti lo suficiente para comprar — manejamos la edición, la estrategia y el empaquetado.',
+    'hero-badge-mini': '🇺🇸 Inglés &amp; 🇪🇸 Español · Producción de Contenido · 📍 Miami',
+    'hero-sub': 'Para que tu audiencia confíe en ti lo suficiente para comprar. Manejamos la edición, la estrategia y el empaquetado.',
     'hero-sub2': 'Tú grabas. Nosotros manejamos todo lo demás.',
     'hero-cta1': 'Iniciar una conversación',
     'hero-cta2': 'Ver nuestro trabajo',
@@ -1446,18 +1414,18 @@ const TRANSLATIONS = {
     'about-h': 'No solo edito contenido fitness.<br>Lo vivo.',
     'about-badge7': '7+ años editando',
     'about-badge': 'Atleta por más de 10 años',
-    'about-role': 'Fundador y Editor — Lean Lens Media',
+    'about-role': 'Fundador y Editor en Lean Lens Media',
     'services-label': 'Lo que hacemos',
     'services-h': 'El servicio completo.<br>O solo lo que necesitas.',
-    'services-sub': 'La mayoría de las agencias hacen una sola cosa.<br>Nosotros cubrimos toda la operación de contenido — para que tú puedas quedarte frente a la cámara.',
+    'services-sub': 'La mayoría de las agencias hacen una sola cosa.<br>Nosotros cubrimos toda la operación de contenido para que tú puedas quedarte frente a la cámara.',
     'vsl-label': 'Más allá del orgánico',
     'vsl-h': 'VSLs y ads pagados que<br>realmente convierten.',
-    'vsl-sub': 'Cuando tu contenido crece una audiencia, el siguiente paso es venderles. Ahí es donde entran los VSLs y los anuncios pagados — y es algo que he hecho, no solo editado.',
+    'vsl-sub': 'Cuando tu contenido crece una audiencia, el siguiente paso es venderles. Ahí entran los VSLs y los anuncios pagados. Y es algo que he hecho, no solo editado.',
     'pkg-label': 'Paquetes',
     'pkg-h': 'Elige tu nivel<br>de compromiso.',
     'pkg-sub': 'Cada paquete es un contrato mensual. Mínimo dos meses de compromiso para realmente mover la aguja.',
     'pkg-note': 'Todos los paquetes son contratos mensuales · Compromiso mínimo de 2 meses',
-    'vsl1-more': 'Ya sea un curso, un programa de coaching o un producto digital — el objetivo no es solo un video pulido; es uno que convierta espectadores fríos en compradores.',
+    'vsl1-more': 'Ya sea un curso, un programa de coaching o un producto digital, el objetivo no es solo un video pulido. Es uno que convierta espectadores fríos en compradores.',
     'vsl2-more': 'Produje creativos publicitarios para programas de fitness que se publicaron en Meta y convirtieron. Ganchos fuertes, ritmo rápido y un llamado a la acción claro antes de que el espectador pueda irse.',
     'vsl3-more': 'Entiendo la programación de entrenamientos, cómo piensa tu audiencia, qué le da miedo y qué quiere realmente de un programa. Ese contexto cambia todo sobre cómo se escribe y edita un video de ventas.',
     'hero-h2a': 'construyendo',
@@ -1480,10 +1448,10 @@ const TRANSLATIONS = {
     'bilingual-sub': 'Producción de Contenido',
     'c-saturno-badge': '100K → 1M suscriptores',
     'c-saturno-role': 'Asociación creativa completa · 2019 – 2025',
-    'c-saturno-desc': 'Responsable de toda la operación de contenido — edición, grabación, ganchos, gráficos, branding y estrategia en formato corto y largo. Construido desde cero durante seis años. Esto es lo que significa el compromiso total.',
+    'c-saturno-desc': 'Responsable de toda la operación de contenido. edición, grabación, ganchos, gráficos, branding y estrategia en formato corto y largo. Construido desde cero durante seis años. Esto es lo que significa el compromiso total.',
     'c-leo-badge': 'Cliente actual',
     'c-leo-role': 'Producción de Contenido & Estrategia',
-    'c-leo-desc': 'Empaquetado completo de video para el mejor coach de movimiento de la industria — edición, estrategia de ganchos, títulos, miniaturas y planificación de contenido. Cada video se produce y construye sobre un marco antes de cortar un solo fotograma.',
+    'c-leo-desc': 'Empaquetado completo de video para el mejor coach de movimiento de la industria. edición, estrategia de ganchos, títulos, miniaturas y planificación de contenido. Cada video se produce y construye sobre un marco antes de cortar un solo fotograma.',
     'c-whealth-badge': 'Cliente actual',
     'c-whealth-role': 'Producción de Contenido & Estrategia',
     'c-whealth-desc': 'Producción de contenido corto y largo para una marca establecida de manejo del dolor. Pipeline completo desde el corte en bruto hasta el video listo para publicar, cada semana.',
@@ -1491,14 +1459,14 @@ const TRANSLATIONS = {
     'c-stpete-role': 'Construcción de Canal desde Cero',
     'c-stpete-desc': 'Menos de 100 suscriptores al inicio. Los videos empaquetados hace cuatro meses están ganando tracción. Prueba de que el sistema funciona a cualquier escala.',
     'c-emb-badge': 'En Español',
-    'c-emb-role': 'Producción de Contenido — Idioma Español',
-    'c-emb-desc': 'Contenido fitness en español — producido para la audiencia hispanohablante que representa un segmento masivo y desatendido en el espacio de creadores de fitness.',
+    'c-emb-role': 'Producción de Contenido. Idioma Español',
+    'c-emb-desc': 'Contenido fitness en español. producido para la audiencia hispanohablante que representa un segmento masivo y desatendido en el espacio de creadores de fitness.',
     'c-summer-badge': 'Proyecto puntual',
     'c-summer-role': 'Producción de Contenido',
-    'c-summer-desc': 'Dos videos producidos para esta creadora de fitness establecida — contenido empaquetado para claridad y retención.',
+    'c-summer-desc': 'Dos videos producidos para esta creadora de fitness establecida. contenido empaquetado para claridad y retención.',
     'c-andry-badge': 'Edición & Grabación',
     'c-andry-role': 'Producción de Video & Grabación en Locación',
-    'c-andry-desc': 'Grabé dos videos para su canal en locación y edité uno — producción en manos propias, desde detrás de la cámara hasta el corte final.',
+    'c-andry-desc': 'Grabé dos videos para su canal en locación y edité uno. producción en manos propias, desde detrás de la cámara hasta el corte final.',
     'c-social-badge': 'Eventos',
     'c-social-role': 'Producción de Contenido para Eventos',
     'c-social-desc': 'Videos de resumen y highlights en formato corto que llevan la energía del evento a algo compartible.',
@@ -1506,23 +1474,23 @@ const TRANSLATIONS = {
     'about-desc2': 'Entonces cuando un cliente me manda material de una parada de manos, un flujo de movilidad o un tutorial de movimiento, ya lo entiendo. Sé lo que la persona que lo ve quiere aprender y por qué hizo clic. Eso cambia cómo edito. No se trata solo de que se vea bien. Se trata de hacer contenido que de verdad conecte.',
     'svc1-name': '<span class="service-icon">🎬</span> Producción de Contenido',
     'svc1-desc': 'Edición de YouTube en formato largo y clips cortos construidos para la retención. Cada corte tiene un motivo. Cada video está optimizado antes de publicarse.',
-    'svc1-more': 'Tomamos el material que grabas y lo convertimos en un video final construido en torno a la retención — ritmo en los primeros 30 segundos para enganchar, eliminar el aire muerto, capas de subtítulos y diseño de sonido, y clips cortos para cada plataforma.',
+    'svc1-more': 'Tomamos el material que grabas y lo convertimos en un video final construido en torno a la retención. ritmo en los primeros 30 segundos para enganchar, eliminar el aire muerto, capas de subtítulos y diseño de sonido, y clips cortos para cada plataforma.',
     'svc2-name': '<span class="service-icon">🗺️</span> Estrategia & Estructura',
     'svc2-desc': 'Blueprints, estrategia de ganchos, pruebas de títulos, dirección de miniaturas y planificación mensual de contenido. El pensamiento que hace funcionar la edición.',
-    'svc2-more': 'Antes de grabar cualquier cosa, construimos el blueprint — qué promete el video, cómo está estructurado para cumplirlo, y qué combinación de título y miniatura le da la mejor oportunidad de ser clickeado.',
+    'svc2-more': 'Antes de grabar cualquier cosa, construimos el blueprint. qué promete el video, cómo está estructurado para cumplirlo, y qué combinación de título y miniatura le da la mejor oportunidad de ser clickeado.',
     'svc3-name': '<span class="service-icon">💻</span> Gestión de Canal',
     'svc3-desc': 'Subida, descripciones, capítulos, revisión de analíticas y publicaciones en la comunidad. El canal funciona sin que tengas que tocarlo.',
-    'svc3-more': 'Una vez que el video está listo, gestionamos todo — subida en horario, descripciones y capítulos, revisión semanal de analíticas, y la pestaña de comunidad activa. Tú grabas. El canal se convierte en algo en lo que no tienes que pensar.',
+    'svc3-more': 'Una vez que el video está listo, gestionamos todo. subida en horario, descripciones y capítulos, revisión semanal de analíticas, y la pestaña de comunidad activa. Tú grabas. El canal se convierte en algo en lo que no tienes que pensar.',
     'cue-learn': 'Haz clic para saber más',
     'btn-view-videos': 'Ver videos',
     'btn-view-shorts': 'Ver contenido corto',
     'vsl1-title': '<span class="vsl-icon">🎯</span>Videos de Ventas (VSLs)',
     'vsl1-short': 'El video que cierra. Guiono, estructuro y edito VSLs construidos en torno al resultado que tu audiencia realmente quiere.',
     'vsl2-title': '<span class="vsl-icon">📣</span>Creativos para Anuncios Pagados',
-    'vsl2-short': 'Anuncios en video de formato corto diseñados para detener el scroll y llevar a las personas a tu embudo — construidos para el rendimiento, no solo para verse bien.',
+    'vsl2-short': 'Anuncios en video de formato corto diseñados para detener el scroll y llevar a las personas a tu embudo. construidos para el rendimiento, no solo para verse bien.',
     'vsl3-title': '<span class="vsl-icon">💡</span>¿Por qué esto importa para los creadores de fitness?',
-    'vsl3-short': 'La mayoría de los creadores de fitness pierden dinero cuando intentan monetizar — porque su editor no sabe vender.',
-    'vsl-price1': 'VSLs y creativos pagados — cotizados por proyecto',
+    'vsl3-short': 'La mayoría de los creadores de fitness pierden dinero cuando intentan monetizar. porque su editor no sabe vender.',
+    'vsl-price1': 'VSLs y creativos pagados. cotizados por proyecto',
     'vsl-price2': 'Desde <strong style="color:var(--accent)">$500</strong> para anuncios de formato corto',
     'vsl-price3': 'Solicita una cotización personalizada →',
     'pkg1-name': 'Solo Formato Corto',
@@ -1572,15 +1540,15 @@ function applyTranslations() {
   // Translate package items
   const pkgItems = {
     en: {
-      pkg1: ['8–10 short-form clips','Captions included','Basic motion graphics','No long-form involved'],
-      pkg2: ['3 long-form videos edited','Thumbnail per video','2 shorts per video','Hook scripts written','Monthly content plan','Video blueprints','Title strategy'],
-      pkg3: ['Everything in Content Production','4 videos per month','Channel management','Uploading to YouTube','Analytics review','Monthly strategy call'],
+      pkg1: ['8–10 short-form clips','Captions included','Sound effects and pacing','Hook optimization','Professional animated shorts','Brand matched visual style','No long-form involved'],
+      pkg2: ['3 long-form videos edited','Thumbnail per video','2 animated brand shorts','Sound effects and pacing','Hook optimization','Hook scripts written','Monthly content plan','Video blueprints','Title strategy'],
+      pkg3: ['Everything in Content Production','4 videos per month','Channel management','Uploading to YouTube','Community posts and polls','Analytics review','Monthly strategy call'],
       pkg4: ['Everything in Growth Partner','Cross-platform posting','Community management','Priority turnaround','Expanded analytics report']
     },
     es: {
-      pkg1: ['8–10 clips de formato corto','Subtítulos incluidos','Gráficos básicos en movimiento','Sin formato largo'],
-      pkg2: ['3 videos largos editados','Miniatura por video','2 shorts por video','Scripts de ganchos escritos','Plan mensual de contenido','Blueprints de video','Estrategia de títulos'],
-      pkg3: ['Todo lo de Producción de Contenido','4 videos por mes','Gestión del canal','Subida a YouTube','Revisión de analíticas','Llamada mensual de estrategia'],
+      pkg1: ['8–10 clips de formato corto','Subtítulos incluidos','Efectos de sonido y ritmo','Optimización de ganchos','Shorts animados profesionales','Estilo visual de marca','Sin formato largo'],
+      pkg2: ['3 videos largos editados','Miniatura por video','2 shorts animados de marca','Efectos de sonido y ritmo','Optimización de ganchos','Scripts de ganchos escritos','Plan mensual de contenido','Blueprints de video','Estrategia de títulos'],
+      pkg3: ['Todo lo de Producción de Contenido','4 videos por mes','Gestión del canal','Subida a YouTube','Publicaciones y encuestas en la comunidad','Revisión de analíticas','Llamada mensual de estrategia'],
       pkg4: ['Todo lo de Socio de Crecimiento','Publicación en todas las plataformas','Gestión de comunidad','Entrega prioritaria','Informe ampliado de analíticas']
     }
   };
