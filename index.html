@@ -261,6 +261,29 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
   .about-badge{margin:0 auto 16px}
 }
 @media(max-width:480px){.packages-grid{grid-template-columns:1fr}}
+/* MOBILE MENU */
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;z-index:200}
+.hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:all .3s ease}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{position:fixed;top:0;right:-280px;width:280px;height:100vh;background:rgba(6,6,15,.97);backdrop-filter:blur(20px);border-left:1px solid var(--border);z-index:150;transition:right .3s ease;padding:90px 32px 40px;display:flex;flex-direction:column;gap:0}
+.mobile-menu.open{right:0}
+.mobile-menu a{display:block;font-family:var(--display);font-size:28px;font-weight:400;letter-spacing:.06em;color:var(--muted2);text-decoration:none;padding:12px 0;border-bottom:1px solid var(--border);transition:color .2s}
+.mobile-menu a:hover,.mobile-menu a:active{color:var(--accent)}
+.mobile-menu a:last-child{border-bottom:none}
+.mobile-menu-cta{margin-top:28px;display:flex;flex-direction:column;gap:10px}
+.mobile-menu-cta a{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;text-align:center;padding:12px 20px;border-radius:4px;text-decoration:none}
+.mobile-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:140;opacity:0;pointer-events:none;transition:opacity .3s}
+.mobile-overlay.open{opacity:1;pointer-events:all}
+@media(max-width:900px){.hamburger{display:flex}}
+
+/* LOGO TOOLTIPS */
+.logo-item{position:relative}
+.logo-tooltip{position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);background:rgba(6,6,15,.95);border:1px solid var(--border2);color:var(--text);font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;padding:5px 10px;border-radius:4px;pointer-events:none;opacity:0;transition:opacity .15s;z-index:50}
+.logo-tooltip::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:5px solid transparent;border-top-color:var(--border2)}
+.logo-item:hover .logo-tooltip{opacity:1}
+
 </style>
 </head>
 <body>
@@ -282,23 +305,40 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
     <li><a href="#contact" data-i18n="nav-contact">Contact</a></li>
   </ul>
   <div style="display:flex;align-items:center;gap:10px">
-      <button onclick="toggleLang()" id="lang-btn" style="background:none;border:1px solid var(--border2);color:var(--muted2);font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:5px;cursor:pointer;transition:all .2s">🇪🇸 ES</button>
-      <a href="#contact" class="nav-cta" data-i18n="nav-cta">Work with us</a>
-    </div>
+    <button onclick="toggleLang()" id="lang-btn" style="background:none;border:1px solid var(--border2);color:var(--muted2);font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:5px;cursor:pointer;transition:all .2s">🇪🇸 ES</button>
+    <a href="#contact" class="nav-cta" data-i18n="nav-cta">Work with us</a>
+    <button class="hamburger" id="hamburger-btn" onclick="toggleMobileMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-overlay" id="mobile-overlay" onclick="closeMobileMenu()"></div>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#work" data-i18n="nav-work" onclick="closeMobileMenu()">Work</a>
+  <a href="#about" data-i18n="nav-about" onclick="closeMobileMenu()">About</a>
+  <a href="#services" data-i18n="nav-services" onclick="closeMobileMenu()">Services</a>
+  <a href="#vsl" data-i18n="nav-vsl" onclick="closeMobileMenu()">VSLs & Ads</a>
+  <a href="#packages" data-i18n="nav-packages" onclick="closeMobileMenu()">Packages</a>
+  <a href="#contact" data-i18n="nav-contact" onclick="closeMobileMenu()">Contact</a>
+  <div class="mobile-menu-cta">
+    <a href="#contact" class="nav-cta" data-i18n="nav-cta" onclick="closeMobileMenu()">Work with us</a>
+  </div>
+</div>
 
 <!-- LOGO STRIP -->
 <div class="logo-strip">
   <div class="logo-strip-label"><span data-i18n="logo-strip-label">Trusted by creators in fitness & beyond</span></div>
   <div class="logo-grid" onclick="document.getElementById('work').scrollIntoView({behavior:'smooth'})" title="View client work">
-    <div class="logo-item"><img src="media/logos/saturno.png" alt="Saturno Movement" onerror="this.style.display='none'" /></div>
-    <div class="logo-item"><img src="media/logos/leomoves.png" alt="LeoMoves" onerror="this.style.display='none'" /></div>
-    <div class="logo-item"><img src="media/logos/whealth.png" alt="Whealth" onerror="this.style.display='none'" /></div>
-    <div class="logo-item"><img src="media/logos/embodyway.png" alt="EmbodyWay" onerror="this.style.display='none'" /></div>
-    <div class="logo-item"><img src="media/logos/stpete.png" alt="Saint Pete Calisthenics" onerror="this.style.display='none'" /></div>
-    <div class="logo-item"><img src="media/logos/socialclub.png" alt="Movement Social Club" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=&quot;logo-fallback&quot;>Movement Social Club</span>'" /></div>
-    <div class="logo-item"><span class="logo-fallback">SummerfunFitness</span></div>
-    <div class="logo-item"><span class="logo-fallback">Andry Strong</span></div>
+    <div class="logo-item"><img src="media/logos/saturno.png" alt="Saturno Movement" onerror="this.style.display='none'" /><span class="logo-tooltip">Saturno Movement</span></div>
+    <div class="logo-item"><img src="media/logos/leomoves.png" alt="LeoMoves" onerror="this.style.display='none'" /><span class="logo-tooltip">LeoMoves</span></div>
+    <div class="logo-item"><img src="media/logos/whealth.png" alt="Whealth" onerror="this.style.display='none'" /><span class="logo-tooltip">Whealth</span></div>
+    <div class="logo-item"><img src="media/logos/embodyway.png" alt="EmbodyWay" onerror="this.style.display='none'" /><span class="logo-tooltip">EmbodyWay</span></div>
+    <div class="logo-item"><img src="media/logos/stpete.png" alt="Saint Pete Calisthenics" onerror="this.style.display='none'" /><span class="logo-tooltip">Saint Pete Calisthenics</span></div>
+    <div class="logo-item"><img src="media/logos/socialclub.png" alt="Movement Social Club" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=&quot;logo-fallback&quot;>Movement Social Club</span>'" /><span class="logo-tooltip">Movement Social Club</span></div>
+    <div class="logo-item"><span class="logo-fallback">SummerfunFitness</span><span class="logo-tooltip">SummerfunFitness</span></div>
+    <div class="logo-item"><span class="logo-fallback">Andry Strong</span><span class="logo-tooltip">Andry Strong</span></div>
   </div>
 </div>
 
@@ -1163,6 +1203,28 @@ document.querySelectorAll('.stat-n[data-target]').forEach(el => counterObserver.
 
   animate();
 })();
+
+// ── MOBILE MENU ────────────────────────────────────────────────────────────
+function toggleMobileMenu() {
+  const menu = document.getElementById('mobile-menu');
+  const overlay = document.getElementById('mobile-overlay');
+  const btn = document.getElementById('hamburger-btn');
+  const isOpen = menu.classList.contains('open');
+  menu.classList.toggle('open', !isOpen);
+  overlay.classList.toggle('open', !isOpen);
+  btn.classList.toggle('open', !isOpen);
+  document.body.style.overflow = isOpen ? '' : 'hidden';
+}
+
+function closeMobileMenu() {
+  const menu = document.getElementById('mobile-menu');
+  const overlay = document.getElementById('mobile-overlay');
+  const btn = document.getElementById('hamburger-btn');
+  menu.classList.remove('open');
+  overlay.classList.remove('open');
+  btn.classList.remove('open');
+  document.body.style.overflow = '';
+}
 
 // ── LANGUAGE TOGGLE ──────────────────────────────────────────────────────
 const TRANSLATIONS = {
