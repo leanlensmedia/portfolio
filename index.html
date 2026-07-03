@@ -514,7 +514,7 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
 <section class="hero" style="padding-top:0;min-height:auto">
   <div class="wrap">
     <div class="hero-inner" style="padding-top:24px;padding-bottom:36px">
-      <h2 class="hero-h1" style="margin-bottom:20px"><span class="line1" data-i18n="hero-h2a">And we can build</span><span class="line2" data-i18n="hero-h2b">authentically organic content</span></h2>
+      <h2 class="hero-h1" style="margin-bottom:20px"><span class="line1" data-i18n="hero-h2a">We can build</span><span class="line2" data-i18n="hero-h2b">authentically organic content</span></h2>
       <p class="hero-sub" style="font-size:18px;max-width:600px;line-height:1.5" data-i18n="hero-sub">So your audience trusts you enough to buy.</p>
       <p class="hero-sub" style="font-size:18px;max-width:600px;line-height:1.5;margin-top:-8px" data-i18n="hero-sub2-line">We handle the edit, the strategy, and the packaging.</p>
       <div style="display:flex;flex-direction:column;align-items:center;gap:2px;margin-bottom:16px">
@@ -860,6 +860,8 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
 
 <div class="divider"></div>
 
+<div class="divider"></div>
+
 <section class="section" id="packages">
   <div class="wrap">
     <div class="section-label" data-i18n="pkg-label">Packages</div>
@@ -944,6 +946,16 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
       </div>
     </div>
     <p class="pkg-note" data-i18n="pkg-note">All packages are monthly retainers · Minimum 2-month commitment</p>
+
+    <div style="margin-top:24px;padding:16px 20px;border:1px solid rgba(197,103,236,.22);border-radius:8px;background:rgba(197,103,236,.03);text-align:center;display:inline-block;width:100%;box-sizing:border-box">
+      <p style="font-family:var(--mono);font-size:10px;color:var(--muted2);letter-spacing:.04em;margin-bottom:10px" data-i18n="disco-intro">Not ready for a retainer? Start with a single project.</p>
+      <p style="font-family:var(--sans);font-size:11px;color:var(--muted);margin-bottom:12px;line-height:1.6;max-width:420px;margin-left:auto;margin-right:auto" data-i18n="disco-deliverables">Includes 1 long-form video edited, 2 promotional shorts, hook script, thumbnail, sound effects and pacing.</p>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px">
+        <span style="font-family:var(--display);font-size:22px;font-weight:400;background:linear-gradient(135deg,#e0a0ff,#a0c0ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 0 5px rgba(197,103,236,.4));letter-spacing:.02em">$650 <span style="font-size:10px;font-family:var(--sans);-webkit-text-fill-color:var(--muted2);background:none">USD</span></span>
+        <span style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:.06em" data-i18n="disco-onetie">One time · No commitment</span>
+        <a href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;" style="font-family:var(--mono);font-size:9px;letter-spacing:.06em;color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(197,103,236,.35);padding-bottom:1px" data-i18n="disco-cta">Reach out to discuss →</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1337,10 +1349,23 @@ const TRANSLATIONS = {
     'vsl-label': 'Beyond organic',
     'vsl-h': 'VSLs & paid ads that<br>actually convert.',
     'vsl-sub': "When your content grows an audience, the next move is selling to them. That is where VSLs and paid ad creative come in. And it is something I have done, not just edited.",
+    'disco-label': 'Not ready for a retainer?',
+    'disco-title': 'Discovery Project',
+    'disco-sub': 'One time · No commitment',
+    'disco-item1': '1 long-form video edited',
+    'disco-item2': '2 promotional shorts',
+    'disco-item3': 'Hook script written',
+    'disco-item4': 'Thumbnail included',
+    'disco-item5': 'Sound effects and pacing',
+    'disco-cta': 'Start with one video →',
     'pkg-label': 'Packages',
     'pkg-h': 'Pick your level<br>of involvement.',
     'pkg-sub': 'Every package is a monthly retainer. Minimum two-month commitment so we can actually move the needle.',
     'pkg-note': 'All packages are monthly retainers · Minimum 2-month commitment',
+    'disco-intro': 'Not ready for a retainer? Start with a single project.',
+    'disco-deliverables': 'Includes 1 long-form video edited, 2 promotional shorts, hook script, thumbnail, sound effects and pacing.',
+    'disco-onetie': 'One time · No commitment',
+    'disco-cta': 'Reach out to discuss →',
     'vsl1-more': "Whether it is a course, a program, or a digital product, the goal is not just a polished video. It is one that converts cold viewers into buyers.",
     'vsl2-more': 'Produced ad creative for fitness programs that ran on Meta and converted. Strong hooks, fast pacing, and a clear call to action before the viewer leaves.',
     'vsl3-more': "I do. I understand workout programming, how your audience thinks, what they are afraid of, and what they actually want from a program. That context changes everything about how a sales video is written and cut.",
@@ -1417,6 +1442,10 @@ const TRANSLATIONS = {
     'pkg3-best': 'Best for creators who want to hand off their entire YouTube operation and just focus on filming.',
     'pkg4-best': 'Best for creators who want one person handling their entire content ecosystem across every platform.',
     'pkg-note': 'All packages are monthly retainers · Minimum 2-month commitment',
+    'disco-intro': 'Not ready for a retainer? Start with a single project.',
+    'disco-deliverables': 'Includes 1 long-form video edited, 2 promotional shorts, hook script, thumbnail, sound effects and pacing.',
+    'disco-onetie': 'One time · No commitment',
+    'disco-cta': 'Reach out to discuss →',
   },
   es: {
     'nav-cta': 'Trabajemos juntos',
@@ -1457,10 +1486,23 @@ const TRANSLATIONS = {
     'vsl-label': 'Más allá del orgánico',
     'vsl-h': 'VSLs y ads pagados que<br>realmente convierten.',
     'vsl-sub': 'Cuando tu contenido crece una audiencia, el siguiente paso es venderles. Ahí entran los VSLs y los anuncios pagados. Y es algo que he hecho, no solo editado.',
+    'disco-label': '¿No estás listo para un contrato mensual?',
+    'disco-title': 'Proyecto de Descubrimiento',
+    'disco-sub': 'Una vez · Sin compromiso',
+    'disco-item1': '1 video largo editado',
+    'disco-item2': '2 shorts promocionales',
+    'disco-item3': 'Script de gancho escrito',
+    'disco-item4': 'Miniatura incluida',
+    'disco-item5': 'Efectos de sonido y ritmo',
+    'disco-cta': 'Empieza con un video →',
     'pkg-label': 'Paquetes',
     'pkg-h': 'Elige tu nivel<br>de compromiso.',
     'pkg-sub': 'Cada paquete es un contrato mensual. Mínimo dos meses de compromiso para realmente mover la aguja.',
     'pkg-note': 'Todos los paquetes son contratos mensuales · Compromiso mínimo de 2 meses',
+    'disco-intro': '¿No estás listo para un contrato mensual? Empieza con un proyecto único.',
+    'disco-deliverables': 'Incluye 1 video largo editado, 2 shorts promocionales, script de gancho, miniatura, efectos de sonido y ritmo.',
+    'disco-onetie': 'Una vez · Sin compromiso',
+    'disco-cta': 'Escríbenos para hablar →',
     'vsl1-more': 'Ya sea un curso, un programa de coaching o un producto digital, el objetivo no es solo un video pulido. Es uno que convierta espectadores fríos en compradores.',
     'vsl2-more': 'Produje creativos publicitarios para programas de fitness que se publicaron en Meta y convirtieron. Ganchos fuertes, ritmo rápido y un llamado a la acción claro antes de que el espectador pueda irse.',
     'vsl3-more': 'Entiendo la programación de entrenamientos, cómo piensa tu audiencia, qué le da miedo y qué quiere realmente de un programa. Ese contexto cambia todo sobre cómo se escribe y edita un video de ventas.',
