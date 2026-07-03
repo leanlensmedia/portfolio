@@ -208,11 +208,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 28px;height:68px;d
 .service-icon{font-size:20px;margin-right:0;display:inline}
 
 /* PACKAGES */
-.packages-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;align-items:stretch;padding-top:32px}
+.packages-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;align-items:stretch;padding-top:40px}
 .pkg-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:24px 24px 24px;backdrop-filter:blur(6px);display:flex;flex-direction:column;position:relative;transition:all .2s;text-align:center;box-sizing:border-box}
 .pkg-card:hover{border-color:var(--accent);color:#fff;background:linear-gradient(135deg,rgba(192,132,252,.18),rgba(77,121,255,.14));box-shadow:0 0 24px rgba(192,132,252,.12)}
 .pkg-card.featured{border-color:rgba(192,132,252,.4);background:rgba(192,132,252,.05)}
-.pkg-card.featured::before{content:'Most popular';position:absolute;top:-26px;left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:4px 14px;background:linear-gradient(135deg,var(--accent),var(--blue));color:#fff;border-radius:4px;white-space:nowrap}
+.pkg-card.featured::before{content:'Most popular';position:absolute;top:-32px;left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:4px 14px;background:linear-gradient(135deg,var(--accent),var(--blue));color:#fff;border-radius:4px;white-space:nowrap}
 
 .pkg-name{font-family:var(--display);font-size:20px;font-weight:400;letter-spacing:.06em;margin-bottom:6px;margin-top:0;min-height:28px;display:flex;align-items:center;justify-content:center}
 .pkg-price{font-family:var(--display);font-size:38px;font-weight:400;letter-spacing:.02em;background:linear-gradient(135deg,#e0a0ff,#a0c0ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:4px;filter:drop-shadow(0 0 8px rgba(197,103,236,.5)) drop-shadow(0 0 20px rgba(28,69,234,.3))}
@@ -577,7 +577,7 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
       <div class="fc-media" >
         <img src="media/leomoves-cover.jpg" alt="LeoMoves"  onerror="this.parentElement.innerHTML='<span style=&quot;font-family:var(--mono);font-size:11px;color:var(--muted)&quot;>Cover image — drop leomoves-cover.jpg into /media</span>'" />
       </div>
-      <div class="fc-badge" data-i18n="c-leo-badge">Current client</div>
+      <div class="fc-badge" data-i18n="c-leo-badge">Project work</div>
       <div class="fc-name">LeoMoves</div>
       <div class="fc-role" data-i18n="c-leo-role">Content Production & Strategy</div>
       <p class="fc-desc" data-i18n="c-leo-desc">Full video packaging for the top movement coach in the industry. Editing, hook strategy, titles, thumbnails, and content planning. Every video is built around a framework before a single frame is cut.</p>
@@ -605,7 +605,7 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
       <div class="fc-media" >
         <img src="media/whealth-cover.jpg" alt="Whealth — Andrew"  onerror="this.parentElement.innerHTML='<span style=&quot;font-family:var(--mono);font-size:11px;color:var(--muted)&quot;>Cover image — drop whealth-cover.jpg into /media</span>'" />
       </div>
-      <div class="fc-badge" data-i18n="c-whealth-badge">Current client</div>
+      <div class="fc-badge" data-i18n="c-whealth-badge">Project work</div>
       <div class="fc-name">Whealth</div>
       <div class="fc-role" data-i18n="c-whealth-role">Content Production & Strategy</div>
       <p class="fc-desc" data-i18n="c-whealth-desc">Ongoing short-form and long-form content production for an established pain management brand. Full pipeline from rough cut to upload-ready, every week.</p>
@@ -1361,10 +1361,10 @@ const TRANSLATIONS = {
     'c-saturno-badge': '100K → 1M subscribers',
     'c-saturno-role': 'Full creative partnership · 2019 – 2025',
     'c-saturno-desc': 'Responsible for the entire content operation. Editing, filming, hooks, graphics, branding, and strategy across short-form and long-form. Built from the ground up over six years. This is what full commitment looks like.',
-    'c-leo-badge': 'Current client',
+    'c-leo-badge': 'Project work',
     'c-leo-role': 'Content Production & Strategy',
     'c-leo-desc': 'Full video packaging for the top movement coach in the industry. Editing, hook strategy, titles, thumbnails, and content planning. Every video is built around a framework before a single frame is cut.',
-    'c-whealth-badge': 'Current client',
+    'c-whealth-badge': 'Project work',
     'c-whealth-role': 'Content Production & Strategy',
     'c-whealth-desc': 'Ongoing short-form and long-form content production for an established pain management brand. Full pipeline from rough cut to upload-ready, every week.',
     'c-stpete-badge': 'Growing',
@@ -1482,10 +1482,10 @@ const TRANSLATIONS = {
     'c-saturno-badge': '100K → 1M suscriptores',
     'c-saturno-role': 'Asociación creativa completa · 2019 – 2025',
     'c-saturno-desc': 'Responsable de toda la operación de contenido. edición, grabación, ganchos, gráficos, branding y estrategia en formato corto y largo. Construido desde cero durante seis años. Esto es lo que significa el compromiso total.',
-    'c-leo-badge': 'Cliente actual',
+    'c-leo-badge': 'Proyecto realizado',
     'c-leo-role': 'Producción de Contenido & Estrategia',
     'c-leo-desc': 'Empaquetado completo de video para el mejor coach de movimiento de la industria. edición, estrategia de ganchos, títulos, miniaturas y planificación de contenido. Cada video se produce y construye sobre un marco antes de cortar un solo fotograma.',
-    'c-whealth-badge': 'Cliente actual',
+    'c-whealth-badge': 'Proyecto realizado',
     'c-whealth-role': 'Producción de Contenido & Estrategia',
     'c-whealth-desc': 'Producción de contenido corto y largo para una marca establecida de manejo del dolor. Pipeline completo desde el corte en bruto hasta el video listo para publicar, cada semana.',
     'c-stpete-badge': 'En crecimiento',
