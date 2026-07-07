@@ -209,7 +209,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 28px;height:68px;d
 
 /* PACKAGES */
 .packages-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;align-items:stretch;padding-top:0}
-.pkg-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-right:none;border-radius:0;padding:24px 24px 24px;backdrop-filter:blur(6px);display:flex;flex-direction:column;position:relative;transition:all .2s;text-align:center;box-sizing:border-box}
+.pkg-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-right:none;border-radius:0;padding:24px 24px 24px;backdrop-filter:blur(6px);display:flex;flex-direction:column;position:relative;transition:all .2s;text-align:center;box-sizing:border-box}.pkg-card:last-child{border-right:1px solid rgba(255,255,255,.07)}
 .pkg-card:hover{border-color:var(--accent);color:#fff;background:linear-gradient(135deg,rgba(192,132,252,.18),rgba(77,121,255,.14));box-shadow:0 0 24px rgba(192,132,252,.12)}
 .pkg-card.featured{border-color:rgba(192,132,252,.4);border-right:none;background:rgba(192,132,252,.05);padding-top:40px}
 .pkg-card.featured::before{content:'Most popular';position:absolute;top:0;left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:3px 10px;background:linear-gradient(135deg,var(--accent),var(--blue));color:#fff;border-radius:0 0 5px 5px;white-space:nowrap}
@@ -734,14 +734,18 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
       <div class="about-photos-col">
         <div class="about-photo">
           <img src="media/fabian-photo.jpg" alt="Fabian Diaz" onerror="this.parentElement.innerHTML='<span class=&quot;img-placeholder&quot;>Drop fabian-photo.jpg into /media</span>'" />
+          <div style="position:absolute;bottom:8px;left:0;right:0;display:flex;justify-content:center">
+            <span class="about-badge" data-i18n="about-badge7" style="margin:0;font-size:9px;padding:3px 8px">7+ years editing</span>
+          </div>
         </div>
         <div class="about-photo about-photo-2">
           <img src="media/fabian-editing.jpg" alt="Fabian editing" onerror="this.parentElement.innerHTML='<span class=&quot;img-placeholder&quot;>Drop fabian-editing.jpg into /media</span>'" />
+          <div style="position:absolute;bottom:8px;left:0;right:0;display:flex;justify-content:center">
+            <span class="about-badge" data-i18n="about-badge" style="margin:0;font-size:9px;padding:3px 8px">10+ year athlete</span>
+          </div>
         </div>
       </div>
       <div>
-        <div class="about-badge" data-i18n="about-badge7">7+ years editing</div>
-        <div class="about-badge" data-i18n="about-badge">10+ year athlete</div>
         <div class="about-name">Fabian Diaz</div>
         <div class="about-role">Founder and Editor at Lean Lens Media</div>
         <p class="about-desc" data-i18n="about-desc1">I have been training calisthenics for over ten years. Not to sound credible. It is genuinely why I am good at this. I know what a solid rep looks like, how workouts are programmed, and how the body moves. Because I have spent years moving mine.</p>
@@ -952,7 +956,7 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
         <div class="pkg-best" data-i18n="pkg4-best">Best for creators who want one person handling their entire content ecosystem across every platform.</div>
       </div>
     </div>
-    <p class="pkg-note" data-i18n="pkg-note">All packages are monthly retainers · Minimum 2-month commitment</p>
+    <p class="pkg-note" style="line-height:1.8">All packages are monthly retainers<br>Minimum 2-month commitment</p>
 
     <div style="margin-top:24px;padding:16px 20px;border:1px solid rgba(197,103,236,.22);border-radius:8px;background:rgba(197,103,236,.03);text-align:center;display:inline-block;width:100%;box-sizing:border-box">
       <p style="font-family:var(--mono);font-size:10px;color:var(--muted2);letter-spacing:.04em;margin-bottom:10px" data-i18n="disco-intro">Not ready for a retainer? Start with a single project.</p>
@@ -1007,7 +1011,7 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
         </div>
         <p class="service-desc" data-i18n="faq-a2">Your raw footage and a general direction of what you want to say. We write the hook, structure the edit, and handle everything from there.</p>
         <div class="service-cue-row"><span class="service-expand-icon" style="width:18px;height:18px;font-size:11px">⌄</span><span class="service-expand-cue" data-i18n="cue-learn">Click to learn more</span></div>
-        <div class="service-more"><div class="service-more-inner" data-i18n="faq-a2-more">You film. We take it from there. That means the hook, the structure, the pacing, captions, sound design, thumbnails, and the blueprint for the next video. The less you have to think about the content side, the better we have done our job.</div></div>
+        <div class="service-more"><div class="service-more-inner" data-i18n="faq-a2-more">Beyond the footage, it helps to have a rough idea of the topic — even just a sentence. From there we handle the scripting direction, hook writing, pacing decisions, captions, sound design, thumbnail brief, and the blueprint for the next video. Most clients spend about 30 minutes a month on the planning side. Everything else is handled.</div></div>
       </div>
 
       <div class="service-card" onclick="toggleService(this)" style="text-align:left">
@@ -1463,7 +1467,7 @@ const TRANSLATIONS = {
     'faq-a1-more': 'We have worked with creators at every stage. Whether you have zero subscribers or 600K, the system is the same. Strong hooks, consistent output, and a packaging strategy built around your specific audience. The channel size at the start does not determine where you end up.',
     'faq-q2': 'What do you actually need from me?',
     'faq-a2': 'Your raw footage and a general direction of what you want to say. We write the hook, structure the edit, and handle everything from there.',
-    'faq-a2-more': 'You film. We take it from there. That means the hook, the structure, the pacing, captions, sound design, thumbnails, and the blueprint for the next video. The less you have to think about the content side, the better we have done our job.',
+    'faq-a2-more': 'Beyond the footage, it helps to have a rough idea of the topic — even just a sentence. From there we handle the scripting direction, hook writing, pacing decisions, captions, sound design, thumbnail brief, and the blueprint for the next video. Most clients spend about 30 minutes a month on the planning side. Everything else is handled.',
     'faq-q3': 'How long before I see results?',
     'faq-a3': 'The first month is about building the system. Most creators see traction between month two and three. Consistent growth typically shows between months three and five.',
     'faq-a3-more': 'Month one is foundation. We establish the format, the hook style, and the production rhythm. Month two and three the data starts talking. By month four and five you have enough output to see clear patterns in what your audience responds to. We track everything so you always know where things stand and why.',
