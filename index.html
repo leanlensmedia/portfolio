@@ -208,11 +208,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 28px;height:68px;d
 .service-icon{font-size:20px;margin-right:0;display:inline}
 
 /* PACKAGES */
-.packages-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;align-items:stretch;padding-top:40px}
-.pkg-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:24px 24px 24px;backdrop-filter:blur(6px);display:flex;flex-direction:column;position:relative;transition:all .2s;text-align:center;box-sizing:border-box}
+.packages-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;align-items:stretch;padding-top:0}
+.pkg-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-right:none;border-radius:0;padding:24px 24px 24px;backdrop-filter:blur(6px);display:flex;flex-direction:column;position:relative;transition:all .2s;text-align:center;box-sizing:border-box}
 .pkg-card:hover{border-color:var(--accent);color:#fff;background:linear-gradient(135deg,rgba(192,132,252,.18),rgba(77,121,255,.14));box-shadow:0 0 24px rgba(192,132,252,.12)}
-.pkg-card.featured{border-color:rgba(192,132,252,.4);background:rgba(192,132,252,.05)}
-.pkg-card.featured::before{content:'Most popular';position:absolute;top:-32px;left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:4px 14px;background:linear-gradient(135deg,var(--accent),var(--blue));color:#fff;border-radius:4px;white-space:nowrap}
+.pkg-card.featured{border-color:rgba(192,132,252,.4);border-right:none;background:rgba(192,132,252,.05);padding-top:40px}
+.pkg-card.featured::before{content:'Most popular';position:absolute;top:0;left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:3px 10px;background:linear-gradient(135deg,var(--accent),var(--blue));color:#fff;border-radius:0 0 5px 5px;white-space:nowrap}
 
 .pkg-name{font-family:var(--display);font-size:20px;font-weight:400;letter-spacing:.06em;margin-bottom:6px;margin-top:0;min-height:28px;display:flex;align-items:center;justify-content:center}
 .pkg-price{font-family:var(--display);font-size:38px;font-weight:400;letter-spacing:.02em;background:linear-gradient(135deg,#e0a0ff,#a0c0ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:4px;filter:drop-shadow(0 0 8px rgba(197,103,236,.5)) drop-shadow(0 0 20px rgba(28,69,234,.3))}
@@ -284,11 +284,11 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
 .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 .mobile-menu{position:fixed;top:0;left:-280px;width:280px;height:100vh;background:rgba(6,6,15,.97);backdrop-filter:blur(20px);border-right:1px solid var(--border);z-index:150;transition:left .3s ease;padding:90px 32px 40px;display:flex;flex-direction:column;gap:0}
 .mobile-menu.open{left:0}
-.mobile-menu a{display:block;font-family:var(--display);font-size:28px;font-weight:400;letter-spacing:.06em;color:#fff;text-decoration:none;padding:12px 0;border-bottom:1px solid var(--border);transition:color .2s}
-.mobile-menu a:hover,.mobile-menu a:active{color:var(--accent)}
+.mobile-menu a{display:block;font-family:var(--display);font-size:28px;font-weight:400;letter-spacing:.06em;color:#fff;text-decoration:none;padding:12px 0;border-bottom:1px solid var(--border);transition:all .2s}
+.mobile-menu a:hover,.mobile-menu a:active{color:var(--accent);text-shadow:0 0 12px rgba(197,103,236,.8),0 0 28px rgba(197,103,236,.5);filter:drop-shadow(0 0 6px rgba(197,103,236,.6))}
 .mobile-menu a:last-child{border-bottom:none}
 .mobile-menu-cta{margin-top:28px;display:flex;flex-direction:column;gap:10px}
-.mobile-menu-cta a{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;text-align:center;padding:12px 20px;border-radius:4px;text-decoration:none;background:linear-gradient(135deg,var(--accent),var(--blue));color:#fff;font-weight:700}
+.mobile-menu-cta a{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;text-align:center;padding:12px 20px;border-radius:4px;text-decoration:none;background:linear-gradient(135deg,var(--accent),var(--blue));color:#fff;font-weight:700;box-shadow:0 0 14px rgba(197,103,236,.4);transition:all .2s}.mobile-menu-cta a:active{box-shadow:0 0 28px rgba(197,103,236,.8),0 0 50px rgba(28,69,234,.5)}
 .mobile-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:140;opacity:0;pointer-events:none;transition:opacity .3s}
 .mobile-overlay.open{opacity:1;pointer-events:all}
 @media(max-width:900px){.hamburger{display:flex}}
@@ -316,10 +316,14 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
 }
 .contact-h{font-family:var(--display);font-size:clamp(28px,4vw,48px);font-weight:400;margin-bottom:14px;background:linear-gradient(135deg,#fff 30%,var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-align:center;animation:neonFlicker 4s infinite, neonPulse 2s ease-in-out infinite alternate}
 
+/* SCROLL PROGRESS BAR */
+#scroll-progress{position:fixed;top:0;left:0;height:3px;width:0%;z-index:999;background:linear-gradient(90deg,var(--accent),var(--blue),var(--pink));transition:width .05s linear;box-shadow:0 0 8px rgba(197,103,236,.6)}
+
 </style>
 </head>
 <body>
 
+<div id="scroll-progress"></div>
 <canvas id="starfield"></canvas>
 
 <!-- NAV -->
@@ -517,15 +521,15 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
       <h2 class="hero-h1" style="margin-bottom:20px"><span class="line1" data-i18n="hero-h2a">We can build</span><span class="line2" data-i18n="hero-h2b">authentically organic content</span></h2>
       <p class="hero-sub" style="font-size:18px;max-width:600px;line-height:1.5" data-i18n="hero-sub">So your audience trusts you enough to buy.</p>
       <p class="hero-sub" style="font-size:18px;max-width:600px;line-height:1.5;margin-top:-8px" data-i18n="hero-sub2-line">We handle the edit, the strategy, and the packaging.</p>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:2px;margin-bottom:16px">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:2px;margin-bottom:36px">
         <span class="hero-sub2" style="margin-bottom:0" data-i18n="hero-sub2a">You film.</span>
         <span class="hero-sub2" style="margin-bottom:0" data-i18n="hero-sub2b">We handle everything else.</span>
       </div>
-      <div class="hero-actions">
+      <div class="hero-actions" style="margin-bottom:36px">
         <a href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;" class="btn-primary" data-i18n="hero-cta1">Start a conversation</a>
         <a href="#work" class="btn-ghost" data-i18n="hero-cta2">See our work</a>
       </div>
-      <div style="display:inline-flex;flex-direction:column;align-items:center;gap:5px;margin-top:16px;padding:10px 20px;border:1px solid rgba(197,103,236,.4);border-radius:6px;background:rgba(197,103,236,.04);box-shadow:0 0 12px rgba(197,103,236,.1),inset 0 0 12px rgba(28,69,234,.04)">
+      <div style="display:inline-flex;flex-direction:column;align-items:center;gap:5px;margin-top:0;padding:10px 20px;border:1px solid rgba(197,103,236,.4);border-radius:6px;background:rgba(197,103,236,.04);box-shadow:0 0 12px rgba(197,103,236,.1),inset 0 0 12px rgba(28,69,234,.04)">
         <span style="font-size:10px;color:var(--muted2);letter-spacing:.08em;font-family:var(--mono)" data-i18n="hero-platforms">YouTube · Instagram · Short-Form · Long-Form</span>
         <span style="font-size:10px;color:var(--muted2);letter-spacing:.08em;font-family:var(--mono)" data-i18n="hero-seo">SEO optimized for search &amp; discovery</span>
       </div>
@@ -581,7 +585,7 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
       <div class="fc-badge" data-i18n="c-leo-badge">Project work</div>
       <div class="fc-name">LeoMoves</div>
       <div class="fc-role" data-i18n="c-leo-role">Content Production & Strategy</div>
-      <p class="fc-desc" data-i18n="c-leo-desc">Full video packaging for one of the top movement coaches in the industry. Editing, hook strategy, titles, thumbnails, and content planning. Every video is built around a framework before a single frame is cut.</p>
+      <p class="fc-desc" data-i18n="c-leo-desc">Strategy, titles, thumbnails, and editing for selected videos — working alongside one of the top movement coaches in the industry to help shape content that performs.</p>
       <div class="fc-links">
         <div class="video-dropdown">
           <button type="button" class="video-dropdown-toggle" data-i18n="btn-view-videos" onclick="toggleVideoDropdown(this)">View videos</button>
@@ -868,7 +872,7 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
     <h2 class="section-h" data-i18n="pkg-h">Pick your level<br>of involvement.</h2>
     <p class="section-sub" data-i18n="pkg-sub">Every package is a monthly retainer. Minimum two-month commitment so we can actually move the needle.</p>
 
-    <div class="packages-grid">
+    <div class="packages-grid" style="border:1px solid rgba(255,255,255,.07);border-radius:10px;overflow:hidden">
       <!-- Short-form -->
       <div class="pkg-card">
         <div class="pkg-name" data-i18n="pkg1-name">Short-Form Only</div>
@@ -961,6 +965,83 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
     </div>
   </div>
 </section>
+
+
+
+<div class="divider"></div>
+
+<!-- WHO THIS IS FOR -->
+<section class="section" id="who">
+  <div class="wrap">
+    <div class="section-label" data-i18n="who-label">This is for you if</div>
+    <h2 class="section-h" data-i18n="who-h">You're already creating.<br>You're just not growing yet.</h2>
+    <div style="max-width:640px;margin:0 auto;text-align:center">
+      <p style="font-family:var(--sans);font-size:15px;color:var(--muted2);line-height:1.8;margin-bottom:16px" data-i18n="who-p1">You film consistently. You post. But the growth does not match the effort. Your content is good. The packaging is not.</p>
+      <p style="font-family:var(--sans);font-size:15px;color:var(--muted2);line-height:1.8;margin-bottom:20px" data-i18n="who-p2">We take what you film and build a system around it. Hooks, structure, distribution, and strategy. If you are also ready to monetize with a VSL or paid ads, we do that too.</p>
+      <p style="font-family:var(--display);font-size:22px;letter-spacing:.04em;color:var(--accent);filter:drop-shadow(0 0 8px rgba(197,103,236,.4))" data-i18n="who-p4">Tired of guessing? This is what we do.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="wrap">
+    <div class="section-label" data-i18n="faq-label">Common questions</div>
+    <h2 class="section-h" data-i18n="faq-h">Before you reach out</h2>
+    <div style="max-width:680px;margin:0 auto;display:flex;flex-direction:column;gap:12px">
+
+      <div class="service-card" onclick="toggleService(this)" style="text-align:left">
+        <div class="service-name-row">
+          <span class="service-name-text" data-i18n="faq-q1">Do I need to already have a YouTube channel?</span>
+        </div>
+        <p class="service-desc" data-i18n="faq-a1">No. We have built channels from under 100 subscribers. What matters is that you are committed to showing up consistently. We handle everything else.</p>
+        <div class="service-cue-row"><span class="service-expand-icon" style="width:18px;height:18px;font-size:11px">⌄</span><span class="service-expand-cue" data-i18n="cue-learn">Click to learn more</span></div>
+        <div class="service-more"><div class="service-more-inner" data-i18n="faq-a1-more">We have worked with creators at every stage. Whether you have zero subscribers or 600K, the system is the same. Strong hooks, consistent output, and a packaging strategy built around your specific audience. The channel size at the start does not determine where you end up.</div></div>
+      </div>
+
+      <div class="service-card" onclick="toggleService(this)" style="text-align:left">
+        <div class="service-name-row">
+          <span class="service-name-text" data-i18n="faq-q2">What do you actually need from me?</span>
+        </div>
+        <p class="service-desc" data-i18n="faq-a2">Your raw footage and a general direction of what you want to say. We write the hook, structure the edit, and handle everything from there.</p>
+        <div class="service-cue-row"><span class="service-expand-icon" style="width:18px;height:18px;font-size:11px">⌄</span><span class="service-expand-cue" data-i18n="cue-learn">Click to learn more</span></div>
+        <div class="service-more"><div class="service-more-inner" data-i18n="faq-a2-more">You film. We take it from there. That means the hook, the structure, the pacing, captions, sound design, thumbnails, and the blueprint for the next video. The less you have to think about the content side, the better we have done our job.</div></div>
+      </div>
+
+      <div class="service-card" onclick="toggleService(this)" style="text-align:left">
+        <div class="service-name-row">
+          <span class="service-name-text" data-i18n="faq-q3">How long before I see results?</span>
+        </div>
+        <p class="service-desc" data-i18n="faq-a3">The first month is about building the system. Most creators see traction between month two and three. Consistent growth typically shows between months three and five.</p>
+        <div class="service-cue-row"><span class="service-expand-icon" style="width:18px;height:18px;font-size:11px">⌄</span><span class="service-expand-cue" data-i18n="cue-learn">Click to learn more</span></div>
+        <div class="service-more"><div class="service-more-inner" data-i18n="faq-a3-more">Month one is foundation. We establish the format, the hook style, and the production rhythm. Month two and three the data starts talking. By month four and five you have enough output to see clear patterns in what your audience responds to. We track everything so you always know where things stand and why.</div></div>
+      </div>
+
+      <div class="service-card" onclick="toggleService(this)" style="text-align:left">
+        <div class="service-name-row">
+          <span class="service-name-text" data-i18n="faq-q4">Do you work with creators outside of fitness?</span>
+        </div>
+        <p class="service-desc" data-i18n="faq-a4">Right now no. Fitness, movement, and calisthenics is where we go deep. That focus is intentional — it is what makes the work better.</p>
+        <div class="service-cue-row"><span class="service-expand-icon" style="width:18px;height:18px;font-size:11px">⌄</span><span class="service-expand-cue" data-i18n="cue-learn">Click to learn more</span></div>
+        <div class="service-more"><div class="service-more-inner" data-i18n="faq-a4-more">We understand the fitness audience, the terminology, the programming, and what makes people watch and trust a creator in this space. That context is not something you can fake. It is built over years of training and working exclusively in this niche. Going deep in one area beats being average everywhere.</div></div>
+      </div>
+
+      <div class="service-card" onclick="toggleService(this)" style="text-align:left">
+        <div class="service-name-row">
+          <span class="service-name-text" data-i18n="faq-q5">What about VSLs and paid ads?</span>
+        </div>
+        <p class="service-desc" data-i18n="faq-a5">Yes. If you have an audience and you are ready to monetize it with a sales video or paid campaign, we handle that separately from monthly packages.</p>
+        <div class="service-cue-row"><span class="service-expand-icon" style="width:18px;height:18px;font-size:11px">⌄</span><span class="service-expand-cue" data-i18n="cue-learn">Click to learn more</span></div>
+        <div class="service-more"><div class="service-more-inner" data-i18n="faq-a5-more">VSLs and paid ad creative are project-based, not retainer-based. We scope each one based on the length, format, and what it needs to convert. Starting from $500 for short-form ads. If you have a program, a course, or a product and you want a video that sells it — reach out and we will talk through what makes sense for your situation.</div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
 
 <div class="divider"></div>
 
@@ -1312,6 +1393,14 @@ function closeMobileMenu() {
   document.body.style.overflow = '';
 }
 
+// ── SCROLL PROGRESS BAR ────────────────────────────────────────────────────
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+  document.getElementById('scroll-progress').style.width = pct + '%';
+});
+
 // ── LANGUAGE TOGGLE ──────────────────────────────────────────────────────
 const TRANSLATIONS = {
   en: {
@@ -1361,6 +1450,29 @@ const TRANSLATIONS = {
     'disco-item4': 'Thumbnail included',
     'disco-item5': 'Sound effects and pacing',
     'disco-cta': 'Start with one video →',
+    'who-label': 'This is for you if',
+    'who-h': "You're already creating.<br>You're just not growing yet.",
+    'who-p1': 'You film consistently. You post. But the growth does not match the effort. Your content is good. The packaging is not.',
+    'who-p2': 'We take what you film and build a system around it. Hooks, structure, distribution, and strategy. If you are also ready to monetize with a VSL or paid ads, we do that too.',
+    'who-p3': 'And if you are ready to go beyond organic — with a sales video or a paid ad campaign that actually converts — we do that too.',
+    'who-p4': 'Tired of guessing? This is what we do.',
+    'faq-label': 'Common questions',
+    'faq-h': 'Before you reach out',
+    'faq-q1': 'Do I need to already have a YouTube channel?',
+    'faq-a1': 'No. We have built channels from under 100 subscribers. What matters is that you are committed to showing up consistently. We handle everything else.',
+    'faq-a1-more': 'We have worked with creators at every stage. Whether you have zero subscribers or 600K, the system is the same. Strong hooks, consistent output, and a packaging strategy built around your specific audience. The channel size at the start does not determine where you end up.',
+    'faq-q2': 'What do you actually need from me?',
+    'faq-a2': 'Your raw footage and a general direction of what you want to say. We write the hook, structure the edit, and handle everything from there.',
+    'faq-a2-more': 'You film. We take it from there. That means the hook, the structure, the pacing, captions, sound design, thumbnails, and the blueprint for the next video. The less you have to think about the content side, the better we have done our job.',
+    'faq-q3': 'How long before I see results?',
+    'faq-a3': 'The first month is about building the system. Most creators see traction between month two and three. Consistent growth typically shows between months three and five.',
+    'faq-a3-more': 'Month one is foundation. We establish the format, the hook style, and the production rhythm. Month two and three the data starts talking. By month four and five you have enough output to see clear patterns in what your audience responds to. We track everything so you always know where things stand and why.',
+    'faq-q4': 'Do you work with creators outside of fitness?',
+    'faq-a4': 'Right now no. Fitness, movement, and calisthenics is where we go deep. That focus is intentional — it is what makes the work better.',
+    'faq-a4-more': 'We understand the fitness audience, the terminology, the programming, and what makes people watch and trust a creator in this space. That context is not something you can fake. It is built over years of training and working exclusively in this niche. Going deep in one area beats being average everywhere.',
+    'faq-q5': 'What about VSLs and paid ads?',
+    'faq-a5': 'Yes. If you have an audience and you are ready to monetize it with a sales video or paid campaign, we handle that separately from monthly packages.',
+    'faq-a5-more': 'VSLs and paid ad creative are project-based, not retainer-based. We scope each one based on the length, format, and what it needs to convert. Starting from $500 for short-form ads. If you have a program, a course, or a product and you want a video that sells it — reach out and we will talk through what makes sense for your situation.',
     'pkg-label': 'Packages',
     'pkg-h': 'Pick your level<br>of involvement.',
     'pkg-sub': 'Every package is a monthly retainer. Minimum two-month commitment so we can actually move the needle.',
@@ -1393,7 +1505,7 @@ const TRANSLATIONS = {
     'c-saturno-desc': 'Responsible for the entire content operation. Editing, filming, hooks, graphics, branding, and strategy across short-form and long-form. Built from the ground up over six years. This is what full commitment looks like.',
     'c-leo-badge': 'Project work',
     'c-leo-role': 'Content Production & Strategy',
-    'c-leo-desc': 'Full video packaging for one of the top movement coaches in the industry. Editing, hook strategy, titles, thumbnails, and content planning. Every video is built around a framework before a single frame is cut.',
+    'c-leo-desc': 'Strategy, titles, thumbnails, and editing for selected videos — working alongside one of the top movement coaches in the industry to help shape content that performs.',
     'c-whealth-badge': 'Project work',
     'c-whealth-role': 'Content Production & Strategy',
     'c-whealth-desc': 'Ongoing short-form and long-form content production for an established pain management brand. Full pipeline from rough cut to upload-ready, every week.',
@@ -1498,6 +1610,29 @@ const TRANSLATIONS = {
     'disco-item4': 'Miniatura incluida',
     'disco-item5': 'Efectos de sonido y ritmo',
     'disco-cta': 'Empieza con un video →',
+    'who-label': 'Esto es para ti si',
+    'who-h': 'Ya estás creando.<br>Solo que aún no estás creciendo.',
+    'who-p1': 'Grabas con consistencia. Publicas. Pero el crecimiento no iguala el esfuerzo. Tu contenido es bueno. El empaquetado no lo es.',
+    'who-p2': 'Tomamos lo que grabas y construimos un sistema alrededor. Ganchos, estructura, distribución y estrategia. Y si estás listo para monetizar con un VSL o anuncios pagados, también lo hacemos.',
+    'who-p3': 'Y si estás listo para ir más allá del orgánico — con un video de ventas o una campaña de anuncios pagados que realmente convierte — también hacemos eso.',
+    'who-p4': '¿Cansado de adivinar? Esto es lo que hacemos.',
+    'faq-label': 'Preguntas frecuentes',
+    'faq-h': 'Antes de escribirnos',
+    'faq-q1': '¿Necesito ya tener un canal de YouTube?',
+    'faq-a1': 'No. Hemos construido canales desde menos de 100 suscriptores. Lo que importa es que estés comprometido a aparecer consistentemente. Nosotros manejamos todo lo demás.',
+    'faq-a1-more': 'Hemos trabajado con creadores en cada etapa. Ya sea que tengas cero suscriptores o 600K, el sistema es el mismo. Ganchos fuertes, output consistente y una estrategia de empaquetado construida alrededor de tu audiencia específica.',
+    'faq-q2': '¿Qué necesitas realmente de mí?',
+    'faq-a2': 'Tu material en bruto y una dirección general de lo que quieres decir. Nosotros escribimos el gancho, estructuramos la edición y manejamos todo desde ahí.',
+    'faq-a2-more': 'Tú grabas. Nosotros tomamos desde ahí. Eso significa el gancho, la estructura, el ritmo, subtítulos, diseño de sonido, miniaturas y el blueprint para el próximo video.',
+    'faq-q3': '¿Cuánto tiempo antes de ver resultados?',
+    'faq-a3': 'El primer mes es construir el sistema. La mayoría de los creadores ven tracción entre el mes dos y tres. El crecimiento consistente típicamente aparece entre los meses tres y cinco.',
+    'faq-a3-more': 'El mes uno es fundación. Establecemos el formato, el estilo de gancho y el ritmo de producción. En el mes dos y tres los datos empiezan a hablar. Para el mes cuatro y cinco tienes suficiente output para ver patrones claros en lo que tu audiencia responde.',
+    'faq-q4': '¿Trabajan con creadores fuera del fitness?',
+    'faq-a4': 'Por ahora no. El fitness, movimiento y calistenia es donde vamos profundo. Ese enfoque es intencional — es lo que hace el trabajo mejor.',
+    'faq-a4-more': 'Entendemos la audiencia de fitness, la terminología, la programación y lo que hace que las personas vean y confíen en un creador en este espacio. Ese contexto no se puede fingir.',
+    'faq-q5': '¿Qué hay de los VSLs y anuncios pagados?',
+    'faq-a5': 'Sí. Si tienes una audiencia y estás listo para monetizarla con un video de ventas o campaña pagada, lo manejamos separado de los paquetes mensuales.',
+    'faq-a5-more': 'Los VSLs y creativos de anuncios pagados son por proyecto, no por retainer. Desde $500 para anuncios de formato corto. Si tienes un programa, curso o producto y quieres un video que lo venda, escríbenos.',
     'pkg-label': 'Paquetes',
     'pkg-h': 'Elige tu nivel<br>de compromiso.',
     'pkg-sub': 'Cada paquete es un contrato mensual. Mínimo dos meses de compromiso para realmente mover la aguja.',
@@ -1657,4 +1792,7 @@ window.addEventListener('load', () => {
 
 </script>
 </body>
-</html>
+</html><div class="divider"></div>
+
+
+
