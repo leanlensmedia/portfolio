@@ -320,10 +320,10 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
 #scroll-progress{position:fixed;top:0;left:0;height:3px;width:0%;z-index:999;background:linear-gradient(90deg,var(--accent),var(--blue),var(--pink));transition:width .05s linear;box-shadow:0 0 8px rgba(197,103,236,.6)}
 
 /* SPLASH SCREEN */
-#splash{position:fixed;inset:0;z-index:9999;background:#03030a;display:flex;align-items:center;justify-content:center;pointer-events:all;opacity:1;transition:opacity .8s ease}
+#splash{position:fixed;inset:0;z-index:9999;background:#03030a;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:all;opacity:1;transition:opacity .8s ease}
 #splash.hidden{opacity:0;pointer-events:none}
 #splash-bg{display:none}
-#splash video{width:220px;height:220px;object-fit:contain;position:relative;z-index:1;mix-blend-mode:lighten;filter:drop-shadow(0 0 20px rgba(197,103,236,.7)) drop-shadow(0 0 50px rgba(28,69,234,.5))}
+#splash video{width:180px;height:180px;object-fit:contain;position:relative;z-index:1;filter:drop-shadow(0 0 20px rgba(197,103,236,.7)) drop-shadow(0 0 50px rgba(28,69,234,.5))}
 
 </style>
 </head>
@@ -332,8 +332,7 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
 <div id="scroll-progress"></div>
 <div id="splash">
   <div id="splash-bg"></div>
-  <video id="splash-video" autoplay muted playsinline preload="auto">
-    <source src="media/logo-animation.webm" type="video/webm">
+  <video id="splash-video" autoplay loop muted playsinline preload="auto">
     <source src="media/logo-animation.mp4" type="video/mp4">
   </video>
 </div>
@@ -1424,40 +1423,48 @@ function closeMobileMenu() {
     return;
   }
 
+  // Detect Safari / iOS — they don't support WebM
+  const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+  const useMp4 = isSafari || isIOS;
+
+  if (useMp4) {
+    // Safari/iOS: use MP4 on solid black bg — no transparency issues
+    splash.style.background = '#03030a';
+    video.style.mixBlendMode = 'normal';
+    // Clear sources and set MP4 only
+    video.innerHTML = '<source src="media/logo-animation.mp4" type="video/mp4">';
+  } else {
+    // Chrome/Firefox/Edge: use WebM with transparency on dark overlay
+    splash.style.background = 'rgba(3,3,10,.92)';
+    video.style.mixBlendMode = 'normal';
+    video.innerHTML = '<source src="media/logo-animation.webm" type="video/webm"><source src="media/logo-animation.mp4" type="video/mp4">';
+  }
+  video.load();
+  video.play().catch(()=>{});
+
   // Prevent scroll while splash is showing
   document.body.style.overflow = 'hidden';
 
-  // Hide after video ends
-  video.addEventListener('ended', () => {
+  function hideSplash() {
     splash.classList.add('hidden');
     setTimeout(() => {
       splash.style.display = 'none';
       document.body.style.overflow = '';
       sessionStorage.setItem('splashSeen', '1');
-    }, 600);
-  });
+    }, 800);
+  }
+
+  // Hide after video ends
+  video.addEventListener('ended', hideSplash);
 
   // Fallback — hide after 4 seconds if video fails
   setTimeout(() => {
-    if (!splash.classList.contains('hidden')) {
-      splash.classList.add('hidden');
-      setTimeout(() => {
-        splash.style.display = 'none';
-        document.body.style.overflow = '';
-        sessionStorage.setItem('splashSeen', '1');
-      }, 600);
-    }
+    if (!splash.classList.contains('hidden')) hideSplash();
   }, 4000);
 
   // Click to skip
-  splash.addEventListener('click', () => {
-    splash.classList.add('hidden');
-    setTimeout(() => {
-      splash.style.display = 'none';
-      document.body.style.overflow = '';
-      sessionStorage.setItem('splashSeen', '1');
-    }, 600);
-  });
+  splash.addEventListener('click', hideSplash);
 })();
 
 // ── SCROLL PROGRESS BAR ────────────────────────────────────────────────────
