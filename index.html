@@ -209,7 +209,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 28px;height:68px;d
 
 /* PACKAGES */
 .packages-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;align-items:stretch;padding-top:0}
-.pkg-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-right:none;border-radius:0;padding:24px 24px 24px;backdrop-filter:blur(6px);display:flex;flex-direction:column;position:relative;transition:all .2s;text-align:center;box-sizing:border-box}.pkg-card:last-child{border-right:1px solid rgba(255,255,255,.07)}
+.pkg-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.12);border-radius:0;padding:24px 24px 24px;backdrop-filter:blur(6px);display:flex;flex-direction:column;position:relative;transition:all .2s;text-align:center;box-sizing:border-box;margin-left:-1px}
 .pkg-card:hover{border-color:var(--accent);color:#fff;background:linear-gradient(135deg,rgba(192,132,252,.18),rgba(77,121,255,.14));box-shadow:0 0 24px rgba(192,132,252,.12)}
 .pkg-card.featured{border-color:rgba(192,132,252,.4);border-right:none;background:rgba(192,132,252,.05);padding-top:40px}
 .pkg-card.featured::before{content:'Most popular';position:absolute;top:0;left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:3px 10px;background:linear-gradient(135deg,var(--accent),var(--blue));color:#fff;border-radius:0 0 5px 5px;white-space:nowrap}
@@ -735,13 +735,13 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
         <div class="about-photo">
           <img src="media/fabian-photo.jpg" alt="Fabian Diaz" onerror="this.parentElement.innerHTML='<span class=&quot;img-placeholder&quot;>Drop fabian-photo.jpg into /media</span>'" />
           <div style="position:absolute;bottom:8px;left:0;right:0;display:flex;justify-content:center">
-            <span class="about-badge" data-i18n="about-badge7" style="margin:0;font-size:9px;padding:3px 8px">7+ years editing</span>
+            <span data-i18n="about-badge7" style="margin:0;font-size:9px;padding:4px 10px;font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;background:linear-gradient(135deg,var(--accent),var(--blue));color:#fff;border-radius:3px;white-space:nowrap;font-weight:700">7+ years editing</span>
           </div>
         </div>
         <div class="about-photo about-photo-2">
           <img src="media/fabian-editing.jpg" alt="Fabian editing" onerror="this.parentElement.innerHTML='<span class=&quot;img-placeholder&quot;>Drop fabian-editing.jpg into /media</span>'" />
           <div style="position:absolute;bottom:8px;left:0;right:0;display:flex;justify-content:center">
-            <span class="about-badge" data-i18n="about-badge" style="margin:0;font-size:9px;padding:3px 8px">10+ year athlete</span>
+            <span data-i18n="about-badge" style="margin:0;font-size:9px;padding:4px 10px;font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;background:linear-gradient(135deg,var(--blue),var(--pink));color:#fff;border-radius:3px;white-space:nowrap;font-weight:700">10+ year athlete</span>
           </div>
         </div>
       </div>
@@ -876,7 +876,7 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
     <h2 class="section-h" data-i18n="pkg-h">Pick your level<br>of involvement.</h2>
     <p class="section-sub" data-i18n="pkg-sub">Every package is a monthly retainer. Minimum two-month commitment so we can actually move the needle.</p>
 
-    <div class="packages-grid" style="border:1px solid rgba(255,255,255,.07);border-radius:10px;overflow:hidden">
+    <div class="packages-grid" style="border:1px solid rgba(255,255,255,.15);border-radius:10px;overflow:hidden">
       <!-- Short-form -->
       <div class="pkg-card">
         <div class="pkg-name" data-i18n="pkg1-name">Short-Form Only</div>
