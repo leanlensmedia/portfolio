@@ -319,11 +319,23 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
 /* SCROLL PROGRESS BAR */
 #scroll-progress{position:fixed;top:0;left:0;height:3px;width:0%;z-index:999;background:linear-gradient(90deg,var(--accent),var(--blue),var(--pink));transition:width .05s linear;box-shadow:0 0 8px rgba(197,103,236,.6)}
 
+/* SPLASH SCREEN */
+#splash{position:fixed;inset:0;z-index:9999;background:#000;display:flex;align-items:center;justify-content:center;transition:opacity .6s ease}
+#splash.hidden{opacity:0;pointer-events:none}
+#splash video{width:280px;height:280px;object-fit:contain}
+
 </style>
 </head>
 <body>
 
 <div id="scroll-progress"></div>
+<div id="splash">
+  <video id="splash-video" autoplay muted playsinline preload="auto">
+    <source src="media/logo-animation.mp4" type="video/mp4">
+  </video>
+</div>
+
+
 <canvas id="starfield"></canvas>
 
 <!-- NAV -->
@@ -735,13 +747,13 @@ footer p{font-family:var(--mono);font-size:11px;color:var(--muted)}
         <div class="about-photo">
           <img src="media/fabian-photo.jpg" alt="Fabian Diaz" onerror="this.parentElement.innerHTML='<span class=&quot;img-placeholder&quot;>Drop fabian-photo.jpg into /media</span>'" />
           <div style="position:absolute;bottom:8px;left:0;right:0;display:flex;justify-content:center">
-            <span data-i18n="about-badge7" style="margin:0;font-size:9px;padding:4px 10px;font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;background:linear-gradient(135deg,var(--accent),var(--blue));color:#fff;border-radius:3px;white-space:nowrap;font-weight:700">10+ year athlete</span>
+            <span data-i18n="about-badge7" style="margin:0;font-size:9px;padding:4px 10px;font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;background:linear-gradient(135deg,var(--accent),var(--blue));color:#fff;border-radius:3px;white-space:nowrap;font-weight:700">7+ years editing</span>
           </div>
         </div>
         <div class="about-photo about-photo-2">
           <img src="media/fabian-editing.jpg" alt="Fabian editing" onerror="this.parentElement.innerHTML='<span class=&quot;img-placeholder&quot;>Drop fabian-editing.jpg into /media</span>'" />
           <div style="position:absolute;bottom:8px;left:0;right:0;display:flex;justify-content:center">
-            <span data-i18n="about-badge" style="margin:0;font-size:9px;padding:4px 10px;font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;background:linear-gradient(135deg,var(--blue),var(--pink));color:#fff;border-radius:3px;white-space:nowrap;font-weight:700">7+ years editing</span>
+            <span data-i18n="about-badge" style="margin:0;font-size:9px;padding:4px 10px;font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;background:linear-gradient(135deg,var(--blue),var(--pink));color:#fff;border-radius:3px;white-space:nowrap;font-weight:700">10+ year athlete</span>
           </div>
         </div>
       </div>
@@ -1396,6 +1408,54 @@ function closeMobileMenu() {
   btn.classList.remove('open');
   document.body.style.overflow = '';
 }
+
+// ── SPLASH SCREEN ──────────────────────────────────────────────────────────
+(function() {
+  const splash = document.getElementById('splash');
+  const video = document.getElementById('splash-video');
+  if (!splash || !video) return;
+
+  // Only show once per session
+  if (sessionStorage.getItem('splashSeen')) {
+    splash.style.display = 'none';
+    return;
+  }
+
+  // Prevent scroll while splash is showing
+  document.body.style.overflow = 'hidden';
+
+  // Hide after video ends
+  video.addEventListener('ended', () => {
+    splash.classList.add('hidden');
+    setTimeout(() => {
+      splash.style.display = 'none';
+      document.body.style.overflow = '';
+      sessionStorage.setItem('splashSeen', '1');
+    }, 600);
+  });
+
+  // Fallback — hide after 4 seconds if video fails
+  setTimeout(() => {
+    if (!splash.classList.contains('hidden')) {
+      splash.classList.add('hidden');
+      setTimeout(() => {
+        splash.style.display = 'none';
+        document.body.style.overflow = '';
+        sessionStorage.setItem('splashSeen', '1');
+      }, 600);
+    }
+  }, 4000);
+
+  // Click to skip
+  splash.addEventListener('click', () => {
+    splash.classList.add('hidden');
+    setTimeout(() => {
+      splash.style.display = 'none';
+      document.body.style.overflow = '';
+      sessionStorage.setItem('splashSeen', '1');
+    }, 600);
+  });
+})();
 
 // ── SCROLL PROGRESS BAR ────────────────────────────────────────────────────
 window.addEventListener('scroll', () => {
